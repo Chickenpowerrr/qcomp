@@ -19,3 +19,7 @@ const int T;
 // Minimum probability that both stations eventually send their packets
 // RESULT (K=1): 1.0
 "eventually": Pmin=? [ F "done" ];
+
+// Tradeoffs between undesired properties deadline_min, and eventually
+"multi_neg": multi(Pmin=? [ F<=T "done" ],
+                   Pmin=? [ F "done" ]);

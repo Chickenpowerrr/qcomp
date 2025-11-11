@@ -9,3 +9,7 @@ const int T;
 // Maximum probability that the malicious recipient eventually gains information
 // RESULT: 0.105658
 "eventually": Pmax=? [ F "gains_information" ];
+
+// Tradeoff between deadline, and eventually
+"multi": multi(Pmax=? [ F<T "gains_information" ],
+               Pmax=? [ F "gains_information" ]);

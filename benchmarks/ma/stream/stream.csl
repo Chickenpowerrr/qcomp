@@ -9,3 +9,8 @@
 
 // Minimal Probability for a buffer underrun within two time units
 "pr_underrun_tb": Pmin=? [F<=2 "underrun"];
+
+// Tradeoff between the properties exp_buffertime, pr_underrun, and pr_underrun_tb
+"multi": multi(R[exp]{"buffering"}min=? [F "done"],
+                   Pmin=? [F "underrun"],
+                   Pmin=? [F<=2 "underrun"]);

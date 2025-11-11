@@ -115,13 +115,11 @@
 			"name": "TminBothQueuesFull",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
 					"op": "Emin",
 					"exp": 1,
-					"accumulate": [
-						"time"
-					],
+					"accumulate": [ "time" ],
 					"reach": {
 						"op": "∧",
 						"left": {
@@ -149,9 +147,7 @@
 				"values": {
 					"op": "Emax",
 					"exp": 1,
-					"accumulate": [
-						"time"
-					],
+					"accumulate": [ "time" ],
 					"reach": {
 						"op": "∧",
 						"left": {
@@ -211,22 +207,120 @@
 				"values": {
 					"op": "Smax",
 					"exp": {
-						"op": "∧",
-						"left": {
-							"op": "=",
-							"left": "sizeLeft",
-							"right": "C_LEFT"
+						"op": "ite",
+						"if": {
+							"op": "∧",
+							"left": {
+								"op": "=",
+								"left": "sizeLeft",
+								"right": "C_LEFT"
+							},
+							"right": {
+								"op": "=",
+								"left": "sizeRight",
+								"right": "C_RIGHT"
+							}
 						},
-						"right": {
-							"op": "=",
-							"left": "sizeRight",
-							"right": "C_RIGHT"
-						}
-					}
+						"then": 1,
+						"else": 0
+					},
+					"accumulate": [ "time" ]
 				},
 				"states": {
 					"op": "initial"
 				}
+			}
+		},
+		{
+			"name": "Multi",
+			"expression": {
+				"op": "Multi",
+				"properties": [
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Emin",
+							"exp": 1,
+							"accumulate": [ "time" ],
+							"reach": {
+								"op": "∧",
+								"left": {
+									"op": "=",
+									"left": "sizeLeft",
+									"right": "C_LEFT"
+								},
+								"right": {
+									"op": "=",
+									"left": "sizeRight",
+									"right": "C_RIGHT"
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmax",
+							"exp": {
+								"op": "F",
+								"exp": {
+									"op": "∧",
+									"left": {
+										"op": "=",
+										"left": "sizeLeft",
+										"right": "C_LEFT"
+									},
+									"right": {
+										"op": "=",
+										"left": "sizeRight",
+										"right": "C_RIGHT"
+									}
+								},
+								"time-bounds": {
+									"upper": "TIME_BOUND"
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Smax",
+							"exp": {
+								"op": "ite",
+								"if": {
+									"op": "∧",
+									"left": {
+										"op": "=",
+										"left": "sizeLeft",
+										"right": "C_LEFT"
+									},
+									"right": {
+										"op": "=",
+										"left": "sizeRight",
+										"right": "C_RIGHT"
+									}
+								},
+								"then": 1,
+								"else": 0
+							},
+							"accumulate": [ "time" ]
+						},
+						"states": {
+							"op": "initial"
+						}
+					}
+				],
+				"type": "tradeoff"
 			}
 		}
 	],
@@ -857,8 +951,7 @@
 							},
 							{
 								"ref": "lj",
-								"value": 0,
-								"index": 2
+								"value": 0
 							}
 						]
 					} ]

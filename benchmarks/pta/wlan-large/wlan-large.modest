@@ -51,6 +51,17 @@ property E_or = Xmax(T, success1_seen || success2_seen);
 // "the maximum expected time until station 1 correctly delivers its packet"
 property E_1 = Xmax(T, success1_seen);
 
+// Tradeoffs between desired properties c1, and steps_min
+property MultiPos = multi(P(<> (success1_seen && success2_seen)) >= 1.0,
+                          Pmax(<> (bc1 == K || bc2 == K)));
+property MultiNeg = multi(Pmin(<> (bc1 == K || bc2 == K)),
+                          Pmin(<>[T<=DEADLINE] (success1_seen && success2_seen)),
+                          Pmin(<>[T<=DEADLINE] (success1_seen || success2_seen)),
+                          Pmin(<>[T<=DEADLINE] success1_seen),
+                          Xmax(T, success1_seen && success2_seen),
+                          Xmax(T, success1_seen || success2_seen),
+                          Xmax(T, success1_seen));
+
 process Channel()
 {
 	alt {

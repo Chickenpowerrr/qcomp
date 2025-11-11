@@ -71,6 +71,14 @@ property Dmin = Pmin(<>[T<=TIME_BOUND] s_ok_seen);
 property Emax = Xmax(T, first_file_done);
 property Emin = Xmin(T, first_file_done);
 
+// Tradeoffs between P_1, P_2, P_3, P_4, Dmin, Emax
+property Multi = multi(Pmax(<>(s_nok_seen || s_dk_seen)),
+                       Pmax(<>(s_dk_seen)),
+                       Pmax(<>(s_nok_seen && i > 8)),
+                       Pmax(<>((s_ok_seen || s_nok_seen || s_dk_seen) && !get_k_seen)),
+                       Pmin(<>[T<=TIME_BOUND] s_ok_seen),
+                       Xmax(T, first_file_done));
+
 process Sender()
 {
 	bool bit;

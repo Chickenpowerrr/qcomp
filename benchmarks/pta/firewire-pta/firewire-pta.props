@@ -10,3 +10,7 @@ const int T;
 // Minimum probability that a leader is eventually elected
 // RESULT: 1.0
 "eventually": Pmin=? [ F "done" ];
+
+// Tradeoff between deadline, and eventually
+"multi": multi(Pmin=? [ F<=T "done" ],
+               Pmin=? [ F "done" ]);

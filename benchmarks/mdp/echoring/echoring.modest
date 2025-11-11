@@ -99,13 +99,18 @@ bool is_offline_3 = false;
 
 
 property MinFailed = Pmin(<> (failed && iter<=ITERATIONS));
-property MinOffline1 = Pmin(<> (is_offline_1 && !is_offline_2 && !is_offline_3  && iter<=ITERATIONS));
+property MinOffline1 = Pmin(<> (is_offline_1 && !is_offline_2 && !is_offline_3 && iter<=ITERATIONS));
 property MaxOffline1 = Pmax(<> (is_offline_1 && !is_offline_2 && !is_offline_3 && iter<=ITERATIONS));
 property MinOffline2 = Pmin(<> (!is_offline_1 && is_offline_2 && !is_offline_3 && iter<=ITERATIONS));
 property MaxOffline2 = Pmax(<> (!is_offline_1 && is_offline_2 && !is_offline_3 && iter<=ITERATIONS));
 property MinOffline3 = Pmin(<> (!is_offline_1 && !is_offline_2 && is_offline_3 && iter<=ITERATIONS));
 property MaxOffline3 = Pmax(<> (!is_offline_1 && !is_offline_2 && is_offline_3 && iter<=ITERATIONS));
-
+property MultiPos = multi(Pmin(<> (is_offline_1 && !is_offline_2 && !is_offline_3 && iter<=ITERATIONS)),
+                          Pmin(<> (!is_offline_1 && is_offline_2 && !is_offline_3 && iter<=ITERATIONS)),
+                          Pmin(<> (!is_offline_1 && !is_offline_2 && is_offline_3 && iter<=ITERATIONS)));
+property MultiNeg = multi(Pmax(<> (is_offline_1 && !is_offline_2 && !is_offline_3 && iter<=ITERATIONS)),
+                          Pmax(<> (!is_offline_1 && is_offline_2 && !is_offline_3 && iter<=ITERATIONS)),
+                          Pmax(<> (!is_offline_1 && !is_offline_2 && is_offline_3 && iter<=ITERATIONS)));
 
 int(0..MAXITER) iter = 0;
 
@@ -164,7 +169,7 @@ process Station(int(1..NRSTATIONS) id, int(1..NRSTATIONS) prec, int(1..NRSTATION
         }
 
         urgent {= stationClock = 0, cRcvInt = 0 =};
-        urgent  alt { // 
+        urgent  alt { //
         	// While we do not the last token transmission.
         ::  when(retries < N)
             urgent {= cRcvInt = 0 =};
@@ -185,8 +190,8 @@ process Station(int(1..NRSTATIONS) id, int(1..NRSTATIONS) prec, int(1..NRSTATION
 		}
 
     }
-    
-        
+
+
 	process EnterIdle(bool txError) {
 	  	urgent {= stationClock = 0, safe = safe || !txError =};
 		invariant(stationClock <= 0) reseto;
@@ -228,7 +233,7 @@ process Station(int(1..NRSTATIONS) id, int(1..NRSTATIONS) prec, int(1..NRSTATION
             receive {= receives = true, ring = msg_ring, errmode = ((RECOVERY_TWO && msg_ring == succ) || RECOVERY_ONE && msg_ring == ring)  ? min(ERR_REC, errmode) : errmode =};
             msg_arrives_Y {= receives = false =}
         }
-        
+
         process ReceiveIntToken() {
             when((msg_ring == ring  || (RECOVERY_TWO && msg_ring == succ) ) && msg_receiver == id && msg_type == MSG_TOKEN_INT)
             receive {= rcvTokenFrom = msg_sender, receives = true, ring = msg_ring, errmode = ((RECOVERY_TWO && msg_ring == succ) || RECOVERY_ONE && msg_ring == ring)  ? min(ERR_REC, errmode) : errmode  =};
@@ -236,13 +241,13 @@ process Station(int(1..NRSTATIONS) id, int(1..NRSTATIONS) prec, int(1..NRSTATION
             invariant(cRcvInt <= 0) send {= msg_sender = id, msg_receiver = rcvTokenFrom, msg_type = MSG_TOKEN_INT_ACK, msg_ring = ring, currentlySending = true =};
             send_done {= currentlySending = false, rcvTokenFrom = 0 =}
         }
-        
+
         process UpdateRing() {
             when((msg_ring == ring  || (RECOVERY_TWO && msg_ring == succ) ) && msg_type == MSG_CLAIMTOKEN)
             receive {= receives = true, ring = msg_sender, errmode = ((RECOVERY_TWO && msg_ring == succ) || RECOVERY_ONE && msg_ring == ring)  ? min(ERR_REC, errmode) : errmode  =};
             msg_arrives_Y {= receives = false =}
         }
-        
+
         process ClaimToken() {
             invariant(stationClock <= 0) send {= msg_sender = id, msg_receiver = id, msg_type = MSG_CLAIMTOKEN, msg_ring = ring, currentlySending = true =};
             send_done {= currentlySending = false, ring = id, safe = false =}
@@ -252,7 +257,7 @@ process Station(int(1..NRSTATIONS) id, int(1..NRSTATIONS) prec, int(1..NRSTATION
         invariant(stationClock <= itd)
         alt {
         	// If we receive the token, we break.
-        ::  ReceiveToken();  
+        ::  ReceiveToken();
         	urgent alt {
                 :: when(errmode == ERR_TX || !safe) tau; Offline()
                 :: when(errmode != ERR_TX && safe) {= stationClock = 0 =}; HasToken()
@@ -261,9 +266,9 @@ process Station(int(1..NRSTATIONS) id, int(1..NRSTATIONS) prec, int(1..NRSTATION
         ::  ReceiveIntToken(); Idle(true, errmode)
         	// Handle data
         ::  ReceiveData(); Idle(receivedIntToken,  errmode)
-        
+
         :: 	UpdateRing(); Idle(receivedIntToken, errmode)
-        
+
         ::  MsgFromOtherRing(); Idle(receivedIntToken, errmode)
         	// If we require too much time, fail.
         :: 	when((deliverClock <= DELIVER_DELAY - 1 || deliverClock >= DELIVER_DELAY + 1 || msg_type == 0) && stationClock >= itd && receivedIntToken && errmode != ERR_TX && safe)

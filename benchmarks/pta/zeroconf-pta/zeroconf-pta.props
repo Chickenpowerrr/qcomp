@@ -9,3 +9,7 @@ const int T;
 // Maximum probability of configuring IP address incorrectly
 // RESULT: 0.001301514
 "incorrect": Pmax=? [ F s=2 & ip=2 ];
+
+// Tradeoff between deadline, and incorrect
+"multi": multi(Pmax=? [ F<=T s=2 & ip=2 ],
+               Pmax=? [ F s=2 & ip=2 ]);

@@ -16,7 +16,10 @@ property ReachMinIsOne = Pmin(<> ((workstations_up[LEFT] == 0 || switches_down[L
 property TimeMax = Xmax(T, (workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]));
 property TimeMin = Xmin(T, (workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]));
 property PmaxReachBound = Pmax(<>[T<=TIME_BOUND] ((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT])));
-property SmaxReach = Smax((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]));
+property SmaxReach = Smax(T((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]) ? 1 : 0));
+property Multi = multi(Xmax(T, (workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT])),
+                       Smax(T((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]) ? 1 : 0)),
+                       Pmax(<>[T<=TIME_BOUND] ((workstations_up[LEFT] == 0 || switches_down[LEFT]) && (workstations_up[RIGHT] == 0 || switches_down[RIGHT]))));
 
 process Backbone()
 {

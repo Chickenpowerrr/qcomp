@@ -103,7 +103,7 @@
 			"name": "P_min",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
 					"op": "Pmin",
 					"exp": {
@@ -161,7 +161,7 @@
 			"name": "D_and",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
 					"op": "Pmin",
 					"exp": {
@@ -172,11 +172,7 @@
 							"right": "success2_seen"
 						},
 						"time-bounds": {
-							"upper": {
-								"op": "*",
-								"left": 15717,
-								"right": 5
-							}
+							"upper": 78585
 						}
 					}
 				},
@@ -189,7 +185,7 @@
 			"name": "D_or",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
 					"op": "Pmin",
 					"exp": {
@@ -200,11 +196,7 @@
 							"right": "success2_seen"
 						},
 						"time-bounds": {
-							"upper": {
-								"op": "*",
-								"left": 15717,
-								"right": 5
-							}
+							"upper": 78585
 						}
 					}
 				},
@@ -217,18 +209,14 @@
 			"name": "D_1",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
 					"op": "Pmin",
 					"exp": {
 						"op": "F",
 						"exp": "success1_seen",
 						"time-bounds": {
-							"upper": {
-								"op": "*",
-								"left": 15717,
-								"right": 5
-							}
+							"upper": 78585
 						}
 					}
 				},
@@ -291,6 +279,204 @@
 				"states": {
 					"op": "initial"
 				}
+			}
+		},
+		{
+			"name": "MultiPos",
+			"expression": {
+				"op": "Multi",
+				"properties": [
+					{
+						"op": "filter",
+						"fun": "∀",
+						"values": {
+							"op": "≥",
+							"left": {
+								"op": "P",
+								"exp": {
+									"op": "F",
+									"exp": {
+										"op": "∧",
+										"left": "success1_seen",
+										"right": "success2_seen"
+									}
+								}
+							},
+							"right": 1
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmax",
+							"exp": {
+								"op": "F",
+								"exp": {
+									"op": "∨",
+									"left": {
+										"op": "=",
+										"left": "bc1",
+										"right": "K"
+									},
+									"right": {
+										"op": "=",
+										"left": "bc2",
+										"right": "K"
+									}
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					}
+				],
+				"type": "tradeoff"
+			}
+		},
+		{
+			"name": "MultiNeg",
+			"expression": {
+				"op": "Multi",
+				"properties": [
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmin",
+							"exp": {
+								"op": "F",
+								"exp": {
+									"op": "∨",
+									"left": {
+										"op": "=",
+										"left": "bc1",
+										"right": "K"
+									},
+									"right": {
+										"op": "=",
+										"left": "bc2",
+										"right": "K"
+									}
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmin",
+							"exp": {
+								"op": "F",
+								"exp": {
+									"op": "∧",
+									"left": "success1_seen",
+									"right": "success2_seen"
+								},
+								"time-bounds": {
+									"upper": 78585
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmin",
+							"exp": {
+								"op": "F",
+								"exp": {
+									"op": "∨",
+									"left": "success1_seen",
+									"right": "success2_seen"
+								},
+								"time-bounds": {
+									"upper": 78585
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmin",
+							"exp": {
+								"op": "F",
+								"exp": "success1_seen",
+								"time-bounds": {
+									"upper": 78585
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Emax",
+							"exp": 1,
+							"accumulate": [ "time" ],
+							"reach": {
+								"op": "∧",
+								"left": "success1_seen",
+								"right": "success2_seen"
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Emax",
+							"exp": 1,
+							"accumulate": [ "time" ],
+							"reach": {
+								"op": "∨",
+								"left": "success1_seen",
+								"right": "success2_seen"
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Emax",
+							"exp": 1,
+							"accumulate": [ "time" ],
+							"reach": "success1_seen"
+						},
+						"states": {
+							"op": "initial"
+						}
+					}
+				],
+				"type": "tradeoff"
 			}
 		}
 	],

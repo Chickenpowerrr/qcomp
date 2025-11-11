@@ -202,9 +202,7 @@
 				"values": {
 					"op": "Emax",
 					"exp": 1,
-					"accumulate": [
-						"time"
-					],
+					"accumulate": [ "time" ],
 					"reach": {
 						"op": "∧",
 						"left": {
@@ -252,13 +250,11 @@
 			"name": "TimeMin",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
 					"op": "Emin",
 					"exp": 1,
-					"accumulate": [
-						"time"
-					],
+					"accumulate": [ "time" ],
 					"reach": {
 						"op": "∧",
 						"left": {
@@ -366,46 +362,216 @@
 				"values": {
 					"op": "Smax",
 					"exp": {
-						"op": "∧",
-						"left": {
-							"op": "∨",
+						"op": "ite",
+						"if": {
+							"op": "∧",
 							"left": {
-								"op": "=",
+								"op": "∨",
 								"left": {
-									"op": "aa",
-									"exp": "workstations_up",
-									"index": 0
+									"op": "=",
+									"left": {
+										"op": "aa",
+										"exp": "workstations_up",
+										"index": 0
+									},
+									"right": 0
 								},
-								"right": 0
+								"right": {
+									"op": "aa",
+									"exp": "switches_down",
+									"index": 0
+								}
 							},
 							"right": {
-								"op": "aa",
-								"exp": "switches_down",
-								"index": 0
+								"op": "∨",
+								"left": {
+									"op": "=",
+									"left": {
+										"op": "aa",
+										"exp": "workstations_up",
+										"index": 1
+									},
+									"right": 0
+								},
+								"right": {
+									"op": "aa",
+									"exp": "switches_down",
+									"index": 1
+								}
 							}
 						},
-						"right": {
-							"op": "∨",
-							"left": {
-								"op": "=",
-								"left": {
-									"op": "aa",
-									"exp": "workstations_up",
-									"index": 1
-								},
-								"right": 0
-							},
-							"right": {
-								"op": "aa",
-								"exp": "switches_down",
-								"index": 1
-							}
-						}
-					}
+						"then": 1,
+						"else": 0
+					},
+					"accumulate": [ "steps" ]
 				},
 				"states": {
 					"op": "initial"
 				}
+			}
+		},
+		{
+			"name": "Multi",
+			"expression": {
+				"op": "Multi",
+				"properties": [
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Emax",
+							"exp": 1,
+							"accumulate": [ "time" ],
+							"reach": {
+								"op": "∧",
+								"left": {
+									"op": "∨",
+									"left": {
+										"op": "=",
+										"left": {
+											"op": "aa",
+											"exp": "workstations_up",
+											"index": 0
+										},
+										"right": 0
+									},
+									"right": {
+										"op": "aa",
+										"exp": "switches_down",
+										"index": 0
+									}
+								},
+								"right": {
+									"op": "∨",
+									"left": {
+										"op": "=",
+										"left": {
+											"op": "aa",
+											"exp": "workstations_up",
+											"index": 1
+										},
+										"right": 0
+									},
+									"right": {
+										"op": "aa",
+										"exp": "switches_down",
+										"index": 1
+									}
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Smax",
+							"exp": {
+								"op": "ite",
+								"if": {
+									"op": "∧",
+									"left": {
+										"op": "∨",
+										"left": {
+											"op": "=",
+											"left": {
+												"op": "aa",
+												"exp": "workstations_up",
+												"index": 0
+											},
+											"right": 0
+										},
+										"right": {
+											"op": "aa",
+											"exp": "switches_down",
+											"index": 0
+										}
+									},
+									"right": {
+										"op": "∨",
+										"left": {
+											"op": "=",
+											"left": {
+												"op": "aa",
+												"exp": "workstations_up",
+												"index": 1
+											},
+											"right": 0
+										},
+										"right": {
+											"op": "aa",
+											"exp": "switches_down",
+											"index": 1
+										}
+									}
+								},
+								"then": 1,
+								"else": 0
+							},
+							"accumulate": [ "steps" ]
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmax",
+							"exp": {
+								"op": "F",
+								"exp": {
+									"op": "∧",
+									"left": {
+										"op": "∨",
+										"left": {
+											"op": "=",
+											"left": {
+												"op": "aa",
+												"exp": "workstations_up",
+												"index": 0
+											},
+											"right": 0
+										},
+										"right": {
+											"op": "aa",
+											"exp": "switches_down",
+											"index": 0
+										}
+									},
+									"right": {
+										"op": "∨",
+										"left": {
+											"op": "=",
+											"left": {
+												"op": "aa",
+												"exp": "workstations_up",
+												"index": 1
+											},
+											"right": 0
+										},
+										"right": {
+											"op": "aa",
+											"exp": "switches_down",
+											"index": 1
+										}
+									}
+								},
+								"time-bounds": {
+									"upper": "TIME_BOUND"
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					}
+				],
+				"type": "tradeoff"
 			}
 		}
 	],

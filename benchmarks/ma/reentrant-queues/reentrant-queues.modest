@@ -17,7 +17,10 @@ property PminBothQueuesFullIsOne = Pmin(<> (sizeLeft == C_LEFT && sizeRight == C
 property TminBothQueuesFull = Xmin(T, sizeLeft == C_LEFT && sizeRight == C_RIGHT);
 property TmaxBothQueuesFull = Xmax(T, sizeLeft == C_LEFT && sizeRight == C_RIGHT);
 property PmaxBothQueuesFullBound = Pmax(<>[T<=TIME_BOUND] (sizeLeft == C_LEFT && sizeRight == C_RIGHT));
-property SmaxBothQueuesFull = Smax(sizeLeft == C_LEFT && sizeRight == C_RIGHT);
+property SmaxBothQueuesFull = Smax(T(sizeLeft == C_LEFT && sizeRight == C_RIGHT ? 1 : 0));
+property Multi = multi(Xmin(T, sizeLeft == C_LEFT && sizeRight == C_RIGHT),
+                       Pmax(<>[T<=TIME_BOUND] (sizeLeft == C_LEFT && sizeRight == C_RIGHT)),
+                       Smax(T(sizeLeft == C_LEFT && sizeRight == C_RIGHT ? 1 : 0)));
 
 process Arrival()
 {

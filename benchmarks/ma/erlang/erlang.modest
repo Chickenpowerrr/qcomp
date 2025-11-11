@@ -34,4 +34,8 @@ ErlangStages(0)
 property PminReach = Pmin(<> goal);
 property TminReach = Xmin(T, goal);
 property PmaxReachBound = Pmax(<>[T<=TIME_BOUND] goal);
-property SmaxNotReach = Smax(!goal);
+property SmaxNotReach = Smax(T(goal ? 0 : 1));
+property MultiPos = multi(Xmin(T, goal),
+                          Pmax(<>[T<=TIME_BOUND] goal));
+property MultiNeg = multi(Pmin(<> goal),
+                          Smax(S(goal ? 0 : 1)));

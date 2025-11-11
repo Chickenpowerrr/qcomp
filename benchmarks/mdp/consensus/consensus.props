@@ -8,3 +8,9 @@
 "steps_max": R{"steps"}max=? [ F "finished" ];
 // Minimum expected steps to finish
 "steps_min": R{"steps"}min=? [ F "finished" ];
+// Tradeoffs between desired properties c1, and steps_min
+"multi_pos": multi(Pmax=? [ F "finished" ],
+                   R{"steps"}min=? [ F "finished" ]);
+// Tradeoffs between undesired properties disagree, and steps_max
+"multi_neg": multi(Pmax=? [ F "finished"&!"agree" ],
+                   R{"steps"}max=? [ F "finished" ]);

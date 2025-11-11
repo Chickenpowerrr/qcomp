@@ -12,3 +12,12 @@
 "time_max": R{"time"}max=? [ F s1=12 & s2=12 ];
 // Minimum expected time for both stations to send correctly
 "time_min": R{"time"}min=? [ F s1=12 & s2=12 ];
+
+// Tradeoffs between desired properties cost_min, and time_min
+"multi_pos": multi(R{"cost"}min=? [ F s1=12 & s2=12 ],
+                   R{"time"}min=? [ F s1=12 & s2=12 ]);
+// Tradeoffs between undesired properties collisions, cost_max, num_collisions, and time_max
+"multi_neg": multi(Pmax=? [ F col=COL ],
+                   R{"cost"}max=? [ F s1=12 & s2=12 ],
+                   R{"collisions"}max=? [ F s1=12 & s2=12 ],
+                   R{"time"}max=? [ F s1=12 & s2=12 ]);

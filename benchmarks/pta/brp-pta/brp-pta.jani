@@ -430,7 +430,7 @@
 			"name": "Dmin",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
 					"op": "Pmin",
 					"exp": {
@@ -454,9 +454,7 @@
 				"values": {
 					"op": "Emax",
 					"exp": 1,
-					"accumulate": [
-						"time"
-					],
+					"accumulate": [ "time" ],
 					"reach": "first_file_done"
 				},
 				"states": {
@@ -468,18 +466,138 @@
 			"name": "Emin",
 			"expression": {
 				"op": "filter",
-				"fun": "min",
+				"fun": "max",
 				"values": {
 					"op": "Emin",
 					"exp": 1,
-					"accumulate": [
-						"time"
-					],
+					"accumulate": [ "time" ],
 					"reach": "first_file_done"
 				},
 				"states": {
 					"op": "initial"
 				}
+			}
+		},
+		{
+			"name": "Multi",
+			"expression": {
+				"op": "Multi",
+				"properties": [
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmax",
+							"exp": {
+								"op": "F",
+								"exp": {
+									"op": "∨",
+									"left": "s_nok_seen",
+									"right": "s_dk_seen"
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmax",
+							"exp": {
+								"op": "F",
+								"exp": "s_dk_seen"
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmax",
+							"exp": {
+								"op": "F",
+								"exp": {
+									"op": "∧",
+									"left": "s_nok_seen",
+									"right": {
+										"op": ">",
+										"left": "i",
+										"right": 8
+									}
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmax",
+							"exp": {
+								"op": "F",
+								"exp": {
+									"op": "∧",
+									"left": {
+										"op": "∨",
+										"left": {
+											"op": "∨",
+											"left": "s_ok_seen",
+											"right": "s_nok_seen"
+										},
+										"right": "s_dk_seen"
+									},
+									"right": {
+										"op": "¬",
+										"exp": "get_k_seen"
+									}
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Pmin",
+							"exp": {
+								"op": "F",
+								"exp": "s_ok_seen",
+								"time-bounds": {
+									"upper": "TIME_BOUND"
+								}
+							}
+						},
+						"states": {
+							"op": "initial"
+						}
+					},
+					{
+						"op": "filter",
+						"fun": "max",
+						"values": {
+							"op": "Emax",
+							"exp": 1,
+							"accumulate": [ "time" ],
+							"reach": "first_file_done"
+						},
+						"states": {
+							"op": "initial"
+						}
+					}
+				],
+				"type": "tradeoff"
 			}
 		}
 	],
@@ -1516,8 +1634,7 @@
 							},
 							{
 								"ref": "c",
-								"value": 0,
-								"index": 1
+								"value": 0
 							}
 						]
 					} ]
@@ -1614,8 +1731,7 @@
 							},
 							{
 								"ref": "c",
-								"value": 0,
-								"index": 1
+								"value": 0
 							}
 						]
 					} ]

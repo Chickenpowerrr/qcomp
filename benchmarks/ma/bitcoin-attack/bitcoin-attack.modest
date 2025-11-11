@@ -25,6 +25,10 @@ property T_MWinMin = Xmin(T, m_len >= CD && m_diff > 0);
 // (maximisation corresponds to optimal strategy)
 property P_MWinMax = Pmax(<>[T<=2880] (m_len >= CD && m_diff > 0));
 
+// The tradeoff between P_MWinMax, and T_MWinMin
+property Multi = multi(Pmax(<>[T<=2880] (m_len >= CD && m_diff > 0)),
+                       Xmin(T, m_len >= CD && m_diff > 0));
+
 process HonestPool()
 {
    rate((1 / 12) * (1 - MALICIOUS / 100)) tau; sln; // honest chain extended

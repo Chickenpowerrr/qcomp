@@ -6,3 +6,7 @@
 "time_max": R{"time"}max=? [ F "done" ];
 // Minimum expected time to elect a leader
 "time_min": R{"time"}min=? [ F "done" ];
+// Tradeoff between elected, rounds, and time_min
+"multi": multi(P>=1 [ F "done" ],
+               R{"rounds"}min=? [ F "done" ],
+               R{"time"}min=? [ F "done" ]);

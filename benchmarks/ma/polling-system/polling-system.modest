@@ -11,7 +11,10 @@ property PminBothFullIsOne = Pmin(<> (size[0] == C && size[1] == C)) == 1;
 property TminBothFull = Xmin(T, size[0] == C && size[1] == C);
 property TmaxBothFull = Xmax(T, size[0] == C && size[1] == C);
 property PmaxBothFullBound = Pmax(<>[T<=TIME_BOUND] (size[0] == C && size[1] == C));
-property SmaxBothFull = Smax((size[0] == C && size[1] == C));
+property SmaxBothFull = Smax(T(size[0] == C && size[1] == C ? 1 : 0));
+property Multi = multi(Xmin(T, size[0] == C && size[1] == C),
+                       Pmax(<>[T<=TIME_BOUND] (size[0] == C && size[1] == C)),
+                       Smax(T(size[0] == C && size[1] == C ? 1 : 0)));
 
 process Station(int id, int(0..JOB_TYPES)[] q)
 {  
