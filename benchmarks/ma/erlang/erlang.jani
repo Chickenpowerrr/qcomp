@@ -110,22 +110,16 @@
 				"op": "Multi",
 				"properties": [
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Emin",
 							"exp": 1,
 							"accumulate": [ "time" ],
 							"reach": "goal"
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "min"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmax",
 							"exp": {
 								"op": "F",
@@ -135,9 +129,7 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					}
 				],
 				"type": "tradeoff"
@@ -149,23 +141,17 @@
 				"op": "Multi",
 				"properties": [
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmin",
 							"exp": {
 								"op": "F",
 								"exp": "goal"
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "min"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Smax",
 							"exp": {
 								"op": "ite",
@@ -175,9 +161,7 @@
 							},
 							"accumulate": [ "steps" ]
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					}
 				],
 				"type": "tradeoff"

@@ -3,8 +3,8 @@
 	"short": "dpm",
 	"type": "ma",
 	"original": "Modest",
-	"version": 2,
-	"date": "2018-10-24",
+	"version": 3,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"version": 1,
@@ -15,7 +15,12 @@
 			"version": 2,
 			"date": "2018-10-24",
 			"notes": "Added properties `PmaxQueuesFullBound´ and `SmaxQueuesFull´."
-		}
+		},
+        {
+			"version": 3,
+			"date": "2025-11-12",
+			"notes": "Added property `Multi´."
+        }
 	],
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -521,7 +526,12 @@
 			"name": "SmaxQueuesFull",
 			"description": "Long-run probability that all queues are full.",
 			"type": "steady-state-prob"
-		}
+		},
+		{
+            "name": "Multi",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between `PmaxQueuesFull´, `TminQueuesFull´, `PmaxQueuesFullBound´, and `SmaxQueuesFull´."
+        }
 	],
 	"results": [
 		{

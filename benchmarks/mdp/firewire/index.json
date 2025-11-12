@@ -3,8 +3,8 @@
 	"short": "firewire",
 	"type": "mdp",
 	"original": "PRISM",
-	"version": 2,
-	"date": "2018-11-03",
+	"version": 3,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"date": "2018-10-11",
@@ -15,7 +15,12 @@
 			"date": "2018-11-03",
 			"notes": "Added property `deadline´ and merged with the firewire_impl_dl model.",
 			"version": 2
-		}
+		},
+        {
+			"version": 3,
+			"date": "2025-11-12",
+			"notes": "Added property `multi_pos´ and `multi_neg´."
+        }
 	],
 	"author": [
 		"Marielle Stoelinga <marielle@cs.kun.nl>",
@@ -78,7 +83,17 @@
 			"name": "deadline",
 			"description": "Minimum probability of completing within `deadline´. If `explicit_timer´ is true, this is an unbounded probabilistic reachability property.",
 			"type": "prob-reach-reward-bounded"
-		}
+		},
+        {
+            "name": "multi_pos",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between desired properties `elected´ and `time_min´."
+        },
+        {
+            "name": "multi_neg",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between undesired properties `time_max´, `deadline´, and `time_sending´."
+        }
 	],
 	"files": [
 		{

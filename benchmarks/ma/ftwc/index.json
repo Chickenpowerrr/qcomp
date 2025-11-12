@@ -3,8 +3,8 @@
 	"short": "ftwc",
 	"type": "ma",
 	"original": "Modest",
-	"version": 4,
-	"date": "2022-09-01",
+	"version": 5,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"version": 1,
@@ -25,7 +25,12 @@
 			"version": 4,
 			"date": "2022-09-01",
 			"notes": "Removed duplicate property `ReachMinIsOne_1´."
-		}
+		},
+        {
+			"version": 5,
+			"date": "2025-11-12",
+			"notes": "Added property `Multi´."
+        }
 	],
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -179,7 +184,12 @@
 			"name": "SmaxReach",
 			"description": "Long-run probability that all left workstations or the left switch are down and similar for the right side.",
 			"type": "steady-state-prob"
-		}
+		},
+        {
+            "name": "Multi",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between `TimeMin´, `SmaxReach´, and `PmaxReachBound´."
+        }
 	],
 	"results": [
 		{

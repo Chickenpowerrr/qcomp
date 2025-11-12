@@ -3,8 +3,8 @@
 	"short": "brp-pta",
 	"type": "pta",
 	"original": "Modest",
-	"version": 2,
-	"date": "2022-08-31",
+	"version": 3,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"version": 1,
@@ -15,7 +15,12 @@
 			"version": 2,
 			"date": "2022-08-31",
 			"notes": "Removed duplicate properties."
-		}
+		},
+        {
+			"version": 3,
+			"date": "2025-11-12",
+			"notes": "Added property `Multi´."
+        }
 	],
 	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
@@ -370,6 +375,11 @@
 			"name": "Emin",
 			"type": "exp-time",
 			"description": "The minimum expected time until the transfer of the first file is finished (successfully or unsuccessfully)."
+		},
+		{
+			"name": "Multi",
+			"type": "multi-tradeoff",
+			"description": "The multi-objective tradeoff between `P_1´, `P_2´, `P_3´, `P_4´, `Dmin´, and `Emax´."
 		}
 	],
 	"results": [

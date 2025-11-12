@@ -10,7 +10,12 @@
 			"date": "2018-10-11",
 			"notes": "Initial version.",
 			"version": 1
-		}
+		},
+        {
+			"version": 2,
+			"date": "2025-11-12",
+			"notes": "Added properties `multi_pos´ and `multi_neg´."
+        }
 	],
 	"author": [
 		"Marta Kwiatkowska <Marta.Kwiatkowska@cs.ox.ac.uk>",
@@ -78,7 +83,17 @@
 			"name": "time_min",
 			"description": "Minimum expected time for both stations to send correctly.",
 			"type": "exp-reward"
-		}
+		},
+        {
+            "name": "multi_pos",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between desired properties `cost_min´ and `time_min´."
+        },
+        {
+            "name": "multi_neg",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between undesired properties `collisions´, `cost_max´, `num_collisions´, and `time_max´."
+        }
 	],
 	"files": [
 		{

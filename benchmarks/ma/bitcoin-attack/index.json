@@ -3,14 +3,19 @@
 	"short": "bitcoin-attack",
 	"type": "ma",
 	"original": "Modest",
-	"version": 1,
-	"date": "2018-07-31",
+	"version": 2,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"version": 1,
 			"date": "2018-07-31",
 			"notes": "Initial version."
-		}
+		},
+        {
+			"version": 2,
+			"date": "2025-11-12",
+			"notes": "Added property `Multi´."
+        }
 	],
 	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
@@ -92,7 +97,12 @@
 			"name": "P_MWinMax",
 			"type": "prob-reach-time-bounded",
 			"description": "The maximum probability that the malicious pool wins within 2 days."
-		}
+		},
+        {
+            "name": "Multi",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between `P_MWinMax´ and `T_MWinMin´."
+        }
 	],
 	"results": [
 		{

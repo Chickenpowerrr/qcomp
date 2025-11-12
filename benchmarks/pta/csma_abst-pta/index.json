@@ -3,8 +3,8 @@
 	"short": "csma_abst-pta",
 	"type": "pta",
 	"original": "PRISM",
-	"version": 2,
-	"date": "2021-02-17",
+	"version": 3,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"date": "2018-10-11",
@@ -13,7 +13,13 @@
 		},
 		{
 			"date": "2021-02-17",
-			"notes": "Fixed type error of power expressions in JANI code."
+			"notes": "Fixed type error of power expressions in JANI code.",
+			"version": 2
+		},
+        {
+			"date": "2025-11-12",
+			"notes": "Added property `multi_neg´.",
+			"version": 3
 		}
 	],
 	"author": "IEEE",
@@ -58,7 +64,12 @@
 			"name": "eventually",
 			"description": "The minimum probability that both stations eventually send their packets.",
 			"type": "prob-reach"
-		}
+		},
+		{
+            "name": "multi_neg",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between undesired properties `deadline_min´ and `eventually´."
+        }
 	],
 	"files": [
 		{

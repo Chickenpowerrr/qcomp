@@ -403,7 +403,7 @@
 						"then": 1,
 						"else": 0
 					},
-					"accumulate": [ "steps" ]
+					"accumulate": [ "time" ]
 				},
 				"states": {
 					"op": "initial"
@@ -416,9 +416,7 @@
 				"op": "Multi",
 				"properties": [
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Emax",
 							"exp": 1,
 							"accumulate": [ "time" ],
@@ -460,14 +458,10 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Smax",
 							"exp": {
 								"op": "ite",
@@ -511,16 +505,12 @@
 								"then": 1,
 								"else": 0
 							},
-							"accumulate": [ "steps" ]
+							"accumulate": [ "time" ]
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmax",
 							"exp": {
 								"op": "F",
@@ -566,9 +556,7 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					}
 				],
 				"type": "tradeoff"

@@ -3,14 +3,19 @@
 	"short": "firewire-pta",
 	"type": "pta",
 	"original": "PRISM",
-	"version": 1,
-	"date": "2018-10-11",
+	"version": 2,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"date": "2018-10-11",
 			"notes": "Initial version.",
 			"version": 1
-		}
+		},
+        {
+			"version": 2,
+			"date": "2025-11-12",
+			"notes": "Added property `multi´."
+        }
 	],
 	"author": [
 		"Marielle Stoelinga <marielle@cs.kun.nl>",
@@ -52,7 +57,12 @@
 			"name": "eventually",
 			"description": "The minimum probability that a leader is eventually elected.",
 			"type": "prob-reach"
-		}
+		},
+        {
+            "name": "multi",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between `deadline´ and `eventually´."
+        }
 	],
 	"files": [
 		{

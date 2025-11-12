@@ -3,8 +3,8 @@
 	"short": "wlan-large",
 	"type": "pta",
 	"original": "Modest",
-	"version": 2,
-	"date": "2022-09-01",
+	"version": 3,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"version": 1,
@@ -15,7 +15,12 @@
 			"version": 2,
 			"date": "2022-09-01",
 			"notes": "Removed duplicate property `P_1_1´."
-		}
+		},
+        {
+			"version": 3,
+			"date": "2025-11-12",
+			"notes": "Added properties `MultiPos´ and `MultiNeg´."
+        }
 	],
 	"author": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
 	"submitter": "Arnd Hartmanns <a.hartmanns@utwente.nl>",
@@ -145,7 +150,17 @@
 			"name": "E_1",
 			"type": "exp-reward",
 			"description": "The maximum expected time until station 1 correctly delivers its packet."
-		}
+		},
+        {
+            "name": "MultiPos",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between undesired properties `P_1´ and `P_max´."
+        },
+        {
+            "name": "MultiNeg",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between undesired properties `P_min´, `D_and´, `D_or´, `D_1´, `E_and´, `E_or´, and `E_1´."
+        }
 	],
 	"results": [
 		"results/mcsta.2.json",

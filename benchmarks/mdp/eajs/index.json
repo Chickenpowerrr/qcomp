@@ -3,15 +3,20 @@
 	"short": "eajs",
 	"type": "mdp",
 	"original": "PRISM",
-	"version": 1,
-	"date": "2018-10-26",
+	"version": 2,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"date": "2018-10-26",
 			"notes": "Initial version.",
 			"version": 1
+		},
+		{
+			"date": "2025-11-12",
+			"notes": "Added property `Multi´.",
+			"version": 2
 		}
-	],
+    ],
 	"author": [
 		"Marcus Daum"
 	],
@@ -52,7 +57,12 @@
 			"name": "ProbUtil",
 			"description": "The maximal probability that a utility value of at least `B´ is achieved until the battery becomes empty.",
 			"type": "prob-reach-reward-bounded"
-		}
+		},
+        {
+            "name": "Multi",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between `ExpUtil´ and `ProbUtil´."
+        }
 	],
 	"files": [
 		{

@@ -3,14 +3,19 @@
 	"short": "csma",
 	"type": "mdp",
 	"original": "PRISM",
-	"version": 1,
-	"date": "2018-10-11",
+	"version": 2,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"date": "2018-10-11",
 			"notes": "Initial version.",
 			"version": 1
-		}
+		},
+		{
+			"version": 2,
+			"date": "2025-11-12",
+			"notes": "Added properties `multi_pos´ and `multi_neg´."
+        }
 	],
 	"author": "IEEE",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -65,7 +70,17 @@
 			"name": "time_min",
 			"description": "Minimum expected time for all messages to be sent.",
 			"type": "exp-reward"
-		}
+		},
+		{
+            "name": "multi_pos",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between desired properties `all_before_max´ and `time_min´."
+        },
+		{
+            "name": "multi_neg",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between undesired properties `all_before_min´, `some_before´, and `time_max´."
+        }
 	],
 	"files": [
 		{

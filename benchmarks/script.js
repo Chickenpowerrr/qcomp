@@ -31,6 +31,7 @@ function propertyTypeToLongString(propertyType)
 	else if(propertyType === "exp-reward-reward-instant") return "reward-instantaneous reward";
 	else if(propertyType === "steady-state-reward") return "steady-state reward";
 	else if(propertyType === "steady-state-prob") return "steady-state probability";
+	else if(propertyType === "multi-tradeoff") return "multi-objective tradeoff";
 	else return propertyType;
 }
 function propertyTypeToShortString(propertyType)
@@ -56,6 +57,7 @@ function propertyTypeToShortString(propertyType)
 	else if(propertyType === "exp-reward-reward-instant") return "Ei";
 	else if(propertyType === "steady-state-prob") return "S";
 	else if(propertyType === "steady-state-reward") return "S";
+	else if(propertyType === "multi-tradeoff") return "Mt";
 	else return propertyType;
 }
 function propertiesToShortList(properties)
@@ -75,6 +77,8 @@ function propertiesToShortList(properties)
 	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × Ei";
 	props = properties.filter(p => p.type === "steady-state-reward" || p.type === "steady-state-prob");
 	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × S";
+	props = properties.filter(p => p.type === "multi-tradeoff");
+	if(props.length !== 0) list += ", " + props.length.toLocaleString() + " × Mt";
 	return list.length === 0 ? list : list.substr(2);
 }
 function CapitaliseFirst(str)

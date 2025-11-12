@@ -264,9 +264,7 @@
 				"op": "Multi",
 				"properties": [
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Emin",
 							"exp": 1,
 							"accumulate": [ "time" ],
@@ -292,14 +290,10 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "min"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmax",
 							"exp": {
 								"op": "F",
@@ -329,14 +323,10 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Smax",
 							"exp": {
 								"op": "ite",
@@ -366,9 +356,7 @@
 							},
 							"accumulate": [ "time" ]
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					}
 				],
 				"type": "tradeoff"

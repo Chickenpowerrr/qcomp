@@ -105,12 +105,6 @@ property MinOffline2 = Pmin(<> (!is_offline_1 && is_offline_2 && !is_offline_3 &
 property MaxOffline2 = Pmax(<> (!is_offline_1 && is_offline_2 && !is_offline_3 && iter<=ITERATIONS));
 property MinOffline3 = Pmin(<> (!is_offline_1 && !is_offline_2 && is_offline_3 && iter<=ITERATIONS));
 property MaxOffline3 = Pmax(<> (!is_offline_1 && !is_offline_2 && is_offline_3 && iter<=ITERATIONS));
-property MultiPos = multi(Pmin(<> (is_offline_1 && !is_offline_2 && !is_offline_3 && iter<=ITERATIONS)),
-                          Pmin(<> (!is_offline_1 && is_offline_2 && !is_offline_3 && iter<=ITERATIONS)),
-                          Pmin(<> (!is_offline_1 && !is_offline_2 && is_offline_3 && iter<=ITERATIONS)));
-property MultiNeg = multi(Pmax(<> (is_offline_1 && !is_offline_2 && !is_offline_3 && iter<=ITERATIONS)),
-                          Pmax(<> (!is_offline_1 && is_offline_2 && !is_offline_3 && iter<=ITERATIONS)),
-                          Pmax(<> (!is_offline_1 && !is_offline_2 && is_offline_3 && iter<=ITERATIONS)));
 
 int(0..MAXITER) iter = 0;
 

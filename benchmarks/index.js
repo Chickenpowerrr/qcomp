@@ -5,7 +5,7 @@ qmcc.params = [];
 qmcc.showLicensing = ko.observable(true);
 qmcc.modelTypes = [ "CTMC", "DTMC", "MA", "MDP", "PTA" ];
 qmcc.originals = ko.observableArray();
-qmcc.propertyTypes = [ "P", "Pb", "E", "Eb", "Ei", "S" ];
+qmcc.propertyTypes = [ "P", "Pb", "E", "Eb", "Ei", "S", "Mt" ];
 qmcc.models = ko.observableArray();
 qmcc.filter = {
 	name: ko.observable(""),

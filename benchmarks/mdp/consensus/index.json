@@ -3,14 +3,19 @@
 	"short": "consensus",
 	"type": "mdp",
 	"original": "PRISM",
-	"version": 1,
-	"date": "2018-10-11",
+	"version": 2,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"date": "2018-10-11",
 			"notes": "Initial version.",
 			"version": 1
-		}
+		},
+        {
+			"version": 2,
+			"date": "2025-11-12",
+			"notes": "Added properties `multi_pos´ and `multi_neg´."
+        }
 	],
 	"author": [
 		"James Aspnes <james.aspnes@yale.edu>",
@@ -67,6 +72,16 @@
 			"name": "steps_min",
 			"description": "Minimum expected steps to finish.",
 			"type": "exp-reward"
+		},
+		{
+			"name": "multi_pos",
+            "type": "multi-tradeoff",
+            "description": "The best value for `steps_min´ given that `c1´ must be satisfied."
+		},
+		{
+			"name": "multi_neg",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between undesired properties `disagree´ and `steps_max´."
 		}
 	],
 	"files": [

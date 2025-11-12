@@ -3,14 +3,19 @@
 	"short": "stream",
 	"type": "ma",
 	"original": "PRISM-MA",
-	"version": 1,
-	"date": "2018-08-13",
+	"version": 2,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"version": 1,
 			"date": "2018-08-13",
 			"notes": "Initial version."
-		}
+		},
+        {
+			"version": 2,
+			"date": "2025-11-12",
+			"notes": "Added property `multi´."
+        }
 	],
 	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
@@ -45,7 +50,12 @@
 			"name": "pr_underrun_tb",
 			"description": "The maximal probability for a buffer underrun within two time units.",
 			"type": "prob-reach-time-bounded"
-		}
+		},
+        {
+            "name": "multi",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between `exp_buffertime´, `pr_underrun´, and `pr_underrun_tb´."
+        }
 	],
 	"files": [
 		{

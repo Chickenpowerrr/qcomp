@@ -117,9 +117,7 @@
 				"op": "Multi",
 				"properties": [
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmax",
 							"exp": {
 								"op": "F",
@@ -141,14 +139,10 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Emin",
 							"exp": 1,
 							"accumulate": [ "time" ],
@@ -166,9 +160,7 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "min"
 					}
 				],
 				"type": "tradeoff"

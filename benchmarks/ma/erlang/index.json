@@ -3,8 +3,8 @@
 	"short": "erlang",
 	"type": "ma",
 	"original": "Modest",
-	"version": 2,
-	"date": "2018-10-24",
+	"version": 3,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"version": 1,
@@ -15,7 +15,12 @@
 			"version": 2,
 			"date": "2018-10-24",
 			"notes": "Added properties `PmaxReachBound´ and `SmaxNotReach´."
-		}
+		},
+        {
+			"version": 3,
+			"date": "2025-11-12",
+			"notes": "Added properties `MultiPos´ and `MultiNeg´."
+        }
 	],
 	"author": "Yuliya Butkova <butkova@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -185,7 +190,17 @@
 			"name": "SmaxNotReach",
 			"description": "Long-run probability that goal is not reached.",
 			"type": "steady-state-prob"
-		}
+		},
+        {
+            "name": "MultiPos",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between desired `TminReach´ and `PmaxReachBound´."
+        },
+        {
+            "name": "MultiNeg",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between undesired `PminReach´ and `SmaxNotReach´."
+        }
 	],
 	"results": [
 		{

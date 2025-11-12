@@ -10,7 +10,12 @@
 			"date": "2018-10-11",
 			"notes": "Initial version.",
 			"version": 1
-		}
+		},
+        {
+			"version": 2,
+			"date": "2025-11-12",
+			"notes": "Added property `multi´."
+        }
 	],
 	"author": [
 		"Olivier Markowitch <omarkow@ulb.ac.be>",
@@ -45,7 +50,12 @@
 			"name": "eventually",
 			"description": "The minimum probability that the protocol eventually terminates successfully.",
 			"type": "prob-reach"
-		}
+		},
+        {
+            "name": "multi",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between `deadline´ and `eventually´."
+        }
 	],
 	"files": [
 		{

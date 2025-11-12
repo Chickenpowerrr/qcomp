@@ -13,5 +13,5 @@
                    R{"time"}min=? [ F "done" ]);
 // Tradeoffs between undesired properties time_max, deadline, and time_sending
 "multi_neg": multi(R{"time"}max=? [ F "done" ],
-                  Pmin=? [ F (((s1=8) & (s2=7)) | ((s1=7) & (s2=8))) & (t<=deadline) ],
+                   Pmin=? [ F (((s1=8) & (s2=7)) | ((s1=7) & (s2=8))) & (t<=deadline) ],
                    R{"time_sending"}max=? [ F "done" ]);

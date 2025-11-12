@@ -3,8 +3,8 @@
 	"short": "reentrant-queues",
 	"type": "ma",
 	"original": "Modest",
-	"version": 4,
-	"date": "2022-09-01",
+	"version": 5,
+	"date": "2025-11-12",
 	"version-history": [
 		{
 			"version": 1,
@@ -25,7 +25,12 @@
 			"version": 4,
 			"date": "2022-09-01",
 			"notes": "Removed duplicate property `PminBothQueuesFullIsOne_1´."
-		}
+		},
+        {
+			"version": 5,
+			"date": "2025-11-12",
+			"notes": "Added property `Multi´."
+        }
 	],
 	"author": "Michaela Klauck <klauck@depend.uni-saarland.de>",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -135,7 +140,12 @@
 			"name": "SmaxBothQueuesFull",
 			"description": "Long-run probability that both queues are full.",
 			"type": "steady-state-prob"
-		}
+		},
+        {
+            "name": "Multi",
+            "type": "multi-tradeoff",
+            "description": "The tradeoff between `TminBothFull´ and `PmaxBothFullBound´, and `SmaxBothFull´."
+        }
 	],
 	"results": [
 		{

@@ -484,9 +484,7 @@
 				"op": "Multi",
 				"properties": [
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmax",
 							"exp": {
 								"op": "F",
@@ -497,28 +495,20 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmax",
 							"exp": {
 								"op": "F",
 								"exp": "s_dk_seen"
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmax",
 							"exp": {
 								"op": "F",
@@ -533,14 +523,10 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmax",
 							"exp": {
 								"op": "F",
@@ -562,14 +548,10 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Pmin",
 							"exp": {
 								"op": "F",
@@ -579,22 +561,16 @@
 								}
 							}
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "min"
 					},
 					{
-						"op": "filter",
-						"fun": "max",
-						"values": {
+						"exp": {
 							"op": "Emax",
 							"exp": 1,
 							"accumulate": [ "time" ],
 							"reach": "first_file_done"
 						},
-						"states": {
-							"op": "initial"
-						}
+						"opt": "max"
 					}
 				],
 				"type": "tradeoff"
