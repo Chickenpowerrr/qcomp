@@ -343,35 +343,27 @@
                                     "value": 0
                                 },
                                 {
-                                    "comment": "s1 <- 8",
+                                    "comment": "s1 <- 3",
                                     "ref": "s1",
-                                    "value": 8
+                                    "value": 3
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "((s1 = 1) & ((x1 = 3) | (x1 = (3 - 1))))",
+                        "comment": "((s1 = 11) & (x1 = 6))",
                         "exp": {
                             "left": {
                                 "left": "s1",
                                 "op": "=",
-                                "right": 1
+                                "right": 11
                             },
                             "op": "∧",
                             "right": {
-                                "left": {
-                                    "left": "x1",
-                                    "op": "=",
-                                    "right": 3
-                                },
-                                "op": "∨",
-                                "right": {
-                                    "left": "x1",
-                                    "op": "=",
-                                    "right": 2
-                                }
+                                "left": "x1",
+                                "op": "=",
+                                "right": 6
                             }
                         }
                     },
@@ -1322,6 +1314,50 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 8",
+                                    "ref": "s1",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 1) & ((x1 = 3) | (x1 = (3 - 1))))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "left": "x1",
+                                    "op": "=",
+                                    "right": 3
+                                },
+                                "op": "∨",
+                                "right": {
+                                    "left": "x1",
+                                    "op": "=",
+                                    "right": 2
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
                                     "comment": "s1 <- 2",
                                     "ref": "s1",
                                     "value": 2
@@ -1354,42 +1390,6 @@
                                 ],
                                 "function": "busy",
                                 "op": "call"
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x1 <- 0",
-                                    "ref": "x1",
-                                    "value": 0
-                                },
-                                {
-                                    "comment": "s1 <- 3",
-                                    "ref": "s1",
-                                    "value": 3
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s1 = 11) & (x1 = 6))",
-                        "exp": {
-                            "left": {
-                                "left": "s1",
-                                "op": "=",
-                                "right": 11
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x1",
-                                "op": "=",
-                                "right": 6
                             }
                         }
                     },
@@ -1451,51 +1451,6 @@
                                     "value": 0
                                 },
                                 {
-                                    "comment": "s1 <- 10",
-                                    "ref": "s1",
-                                    "value": 10
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(((s1 = 9) & (x1 >= 4)) & (c1 = 1))",
-                        "exp": {
-                            "left": {
-                                "left": {
-                                    "left": "s1",
-                                    "op": "=",
-                                    "right": 9
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "x1",
-                                    "op": "≥",
-                                    "right": 4
-                                }
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "c1",
-                                "op": "=",
-                                "right": 1
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "finish1",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x1 <- 0",
-                                    "ref": "x1",
-                                    "value": 0
-                                },
-                                {
                                     "comment": "s1 <- 12",
                                     "ref": "s1",
                                     "value": 12
@@ -1538,6 +1493,51 @@
                                     "op": "=",
                                     "right": 3
                                 }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "finish1",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- 0",
+                                    "ref": "x1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s1 <- 10",
+                                    "ref": "s1",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s1 = 9) & (x1 >= 4)) & (c1 = 1))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s1",
+                                    "op": "=",
+                                    "right": 9
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "x1",
+                                    "op": "≥",
+                                    "right": 4
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "c1",
+                                "op": "=",
+                                "right": 1
                             }
                         }
                     },
@@ -1962,19 +1962,19 @@
                         }
                     ],
                     "guard": {
-                        "comment": "(((s1 = 5) & (x1 < 1)) & free(c1, c2))",
+                        "comment": "(((s1 = 1) & (x1 < 3)) & free(c1, c2))",
                         "exp": {
                             "left": {
                                 "left": {
                                     "left": "s1",
                                     "op": "=",
-                                    "right": 5
+                                    "right": 1
                                 },
                                 "op": "∧",
                                 "right": {
                                     "left": "x1",
                                     "op": "<",
-                                    "right": 1
+                                    "right": 3
                                 }
                             },
                             "op": "∧",
@@ -1996,17 +1996,9 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "x1 <- (min((x1 + 1), 11))",
-                                    "ref": "x1",
-                                    "value": {
-                                        "left": {
-                                            "left": "x1",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 11
-                                    }
+                                    "comment": "s1 <- 2",
+                                    "ref": "s1",
+                                    "value": 2
                                 },
                                 {
                                     "comment": "time <- 50",
@@ -2300,20 +2292,12 @@
                         }
                     ],
                     "guard": {
-                        "comment": "(((s1 = 1) & (x1 < 3)) & free(c1, c2))",
+                        "comment": "((s1 = 2) & busy(c1, c2))",
                         "exp": {
                             "left": {
-                                "left": {
-                                    "left": "s1",
-                                    "op": "=",
-                                    "right": 1
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "x1",
-                                    "op": "<",
-                                    "right": 3
-                                }
+                                "left": "s1",
+                                "op": "=",
+                                "right": 2
                             },
                             "op": "∧",
                             "right": {
@@ -2321,7 +2305,7 @@
                                     "c1",
                                     "c2"
                                 ],
-                                "function": "free",
+                                "function": "busy",
                                 "op": "call"
                             }
                         }
@@ -2660,6 +2644,666 @@
                                     "c2"
                                 ],
                                 "function": "free",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x1 <- (min((x1 + 1), 11))",
+                                    "ref": "x1",
+                                    "value": {
+                                        "left": {
+                                            "left": "x1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 11
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 50",
+                                    "ref": "time",
+                                    "value": 50
+                                },
+                                {
+                                    "comment": "cost <- (((((((((((c1 = 0) & (c2 = 0)) ? 50 : 0) + (((c1 + c2) = 1) ? 500 : 0)) + (((c1 = 1) & (c2 = 1)) ? 1000 : 0)) + (((((c1 = 0) & (c2 = 2)) & (bc1 = 0)) & (bc2 = 0)) ? 500 : 0)) + (((((c1 = 2) & (c2 = 0)) & (bc1 = 0)) & (bc2 = 0)) ? 500 : 0)) + (((((c1 = 2) & (c2 = 2)) & (bc1 = 0)) & (bc2 = 0)) ? 1000 : 0)) + ((((c1 = 0) & (c2 = 2)) & ((bc1 > 0) | (bc2 > 0))) ? 50000 : 0)) + ((((c1 = 2) & (c2 = 0)) & ((bc1 > 0) | (bc2 > 0))) ? 50000 : 0)) + ((((c1 = 2) & (c2 = 2)) & ((bc1 > 0) | (bc2 > 0))) ? 100000 : 0))",
+                                    "ref": "cost",
+                                    "value": {
+                                        "left": {
+                                            "left": {
+                                                "left": {
+                                                    "left": {
+                                                        "else": 0.0,
+                                                        "if": {
+                                                            "left": {
+                                                                "left": {
+                                                                    "left": "c1",
+                                                                    "op": "=",
+                                                                    "right": 2
+                                                                },
+                                                                "op": "∧",
+                                                                "right": {
+                                                                    "left": "c2",
+                                                                    "op": "=",
+                                                                    "right": 2
+                                                                }
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": {
+                                                                    "left": "bc1",
+                                                                    "op": ">",
+                                                                    "right": 0
+                                                                },
+                                                                "op": "∨",
+                                                                "right": {
+                                                                    "left": "bc2",
+                                                                    "op": ">",
+                                                                    "right": 0
+                                                                }
+                                                            }
+                                                        },
+                                                        "op": "ite",
+                                                        "then": 100000
+                                                    },
+                                                    "op": "+",
+                                                    "right": {
+                                                        "else": 0.0,
+                                                        "if": {
+                                                            "left": {
+                                                                "left": "c1",
+                                                                "op": "+",
+                                                                "right": "c2"
+                                                            },
+                                                            "op": "=",
+                                                            "right": 1
+                                                        },
+                                                        "op": "ite",
+                                                        "then": 500
+                                                    }
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "bc2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 500
+                                                }
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "left": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": ">",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∨",
+                                                            "right": {
+                                                                "left": "bc2",
+                                                                "op": ">",
+                                                                "right": 0
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 50000
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": "c1",
+                                                            "op": "=",
+                                                            "right": 1
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": "c2",
+                                                            "op": "=",
+                                                            "right": 1
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 1000
+                                                }
+                                            }
+                                        },
+                                        "op": "+",
+                                        "right": {
+                                            "left": {
+                                                "left": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": ">",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∨",
+                                                            "right": {
+                                                                "left": "bc2",
+                                                                "op": ">",
+                                                                "right": 0
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 50000
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": "c1",
+                                                            "op": "=",
+                                                            "right": 0
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": "c2",
+                                                            "op": "=",
+                                                            "right": 0
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 50
+                                                }
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "left": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "bc2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 1000
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "bc2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 500
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s1 = 5) & (x1 < 1)) & free(c1, c2))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s1",
+                                    "op": "=",
+                                    "right": 5
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "x1",
+                                    "op": "<",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "c1",
+                                    "c2"
+                                ],
+                                "function": "free",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 6",
+                                    "ref": "s1",
+                                    "value": 6
+                                },
+                                {
+                                    "comment": "time <- 50",
+                                    "ref": "time",
+                                    "value": 50
+                                },
+                                {
+                                    "comment": "cost <- (((((((((((c1 = 0) & (c2 = 0)) ? 50 : 0) + (((c1 + c2) = 1) ? 500 : 0)) + (((c1 = 1) & (c2 = 1)) ? 1000 : 0)) + (((((c1 = 0) & (c2 = 2)) & (bc1 = 0)) & (bc2 = 0)) ? 500 : 0)) + (((((c1 = 2) & (c2 = 0)) & (bc1 = 0)) & (bc2 = 0)) ? 500 : 0)) + (((((c1 = 2) & (c2 = 2)) & (bc1 = 0)) & (bc2 = 0)) ? 1000 : 0)) + ((((c1 = 0) & (c2 = 2)) & ((bc1 > 0) | (bc2 > 0))) ? 50000 : 0)) + ((((c1 = 2) & (c2 = 0)) & ((bc1 > 0) | (bc2 > 0))) ? 50000 : 0)) + ((((c1 = 2) & (c2 = 2)) & ((bc1 > 0) | (bc2 > 0))) ? 100000 : 0))",
+                                    "ref": "cost",
+                                    "value": {
+                                        "left": {
+                                            "left": {
+                                                "left": {
+                                                    "left": {
+                                                        "else": 0.0,
+                                                        "if": {
+                                                            "left": {
+                                                                "left": {
+                                                                    "left": "c1",
+                                                                    "op": "=",
+                                                                    "right": 2
+                                                                },
+                                                                "op": "∧",
+                                                                "right": {
+                                                                    "left": "c2",
+                                                                    "op": "=",
+                                                                    "right": 2
+                                                                }
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": {
+                                                                    "left": "bc1",
+                                                                    "op": ">",
+                                                                    "right": 0
+                                                                },
+                                                                "op": "∨",
+                                                                "right": {
+                                                                    "left": "bc2",
+                                                                    "op": ">",
+                                                                    "right": 0
+                                                                }
+                                                            }
+                                                        },
+                                                        "op": "ite",
+                                                        "then": 100000
+                                                    },
+                                                    "op": "+",
+                                                    "right": {
+                                                        "else": 0.0,
+                                                        "if": {
+                                                            "left": {
+                                                                "left": "c1",
+                                                                "op": "+",
+                                                                "right": "c2"
+                                                            },
+                                                            "op": "=",
+                                                            "right": 1
+                                                        },
+                                                        "op": "ite",
+                                                        "then": 500
+                                                    }
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "bc2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 500
+                                                }
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "left": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": ">",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∨",
+                                                            "right": {
+                                                                "left": "bc2",
+                                                                "op": ">",
+                                                                "right": 0
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 50000
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": "c1",
+                                                            "op": "=",
+                                                            "right": 1
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": "c2",
+                                                            "op": "=",
+                                                            "right": 1
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 1000
+                                                }
+                                            }
+                                        },
+                                        "op": "+",
+                                        "right": {
+                                            "left": {
+                                                "left": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": ">",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∨",
+                                                            "right": {
+                                                                "left": "bc2",
+                                                                "op": ">",
+                                                                "right": 0
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 50000
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": "c1",
+                                                            "op": "=",
+                                                            "right": 0
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": "c2",
+                                                            "op": "=",
+                                                            "right": 0
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 50
+                                                }
+                                            },
+                                            "op": "+",
+                                            "right": {
+                                                "left": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "bc2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 1000
+                                                },
+                                                "op": "+",
+                                                "right": {
+                                                    "else": 0.0,
+                                                    "if": {
+                                                        "left": {
+                                                            "left": {
+                                                                "left": "bc2",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c2",
+                                                                "op": "=",
+                                                                "right": 2
+                                                            }
+                                                        },
+                                                        "op": "∧",
+                                                        "right": {
+                                                            "left": {
+                                                                "left": "bc1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            },
+                                                            "op": "∧",
+                                                            "right": {
+                                                                "left": "c1",
+                                                                "op": "=",
+                                                                "right": 0
+                                                            }
+                                                        }
+                                                    },
+                                                    "op": "ite",
+                                                    "then": 500
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s1 = 6) & busy(c1, c2))",
+                        "exp": {
+                            "left": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "c1",
+                                    "c2"
+                                ],
+                                "function": "busy",
                                 "op": "call"
                             }
                         }
@@ -3641,37 +4285,18 @@
                         }
                     ],
                     "guard": {
-                        "comment": "((((s1 = 10) & (c1 = 0)) & (x1 = 0)) & free(c1, c2))",
+                        "comment": "((s1 = 9) & (x1 < 10))",
                         "exp": {
                             "left": {
-                                "left": {
-                                    "args": [
-                                        "c1",
-                                        "c2"
-                                    ],
-                                    "function": "free",
-                                    "op": "call"
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "c1",
-                                    "op": "=",
-                                    "right": 0
-                                }
+                                "left": "s1",
+                                "op": "=",
+                                "right": 9
                             },
                             "op": "∧",
                             "right": {
-                                "left": {
-                                    "left": "x1",
-                                    "op": "=",
-                                    "right": 0
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "s1",
-                                    "op": "=",
-                                    "right": 10
-                                }
+                                "left": "x1",
+                                "op": "<",
+                                "right": 10
                             }
                         }
                     },
@@ -3683,9 +4308,17 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "s1 <- 2",
-                                    "ref": "s1",
-                                    "value": 2
+                                    "comment": "x1 <- (min((x1 + 1), 11))",
+                                    "ref": "x1",
+                                    "value": {
+                                        "left": {
+                                            "left": "x1",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 11
+                                    }
                                 },
                                 {
                                     "comment": "time <- 50",
@@ -3979,21 +4612,37 @@
                         }
                     ],
                     "guard": {
-                        "comment": "((s1 = 2) & busy(c1, c2))",
+                        "comment": "((((s1 = 10) & (c1 = 0)) & (x1 = 0)) & free(c1, c2))",
                         "exp": {
                             "left": {
-                                "left": "s1",
-                                "op": "=",
-                                "right": 2
+                                "left": {
+                                    "args": [
+                                        "c1",
+                                        "c2"
+                                    ],
+                                    "function": "free",
+                                    "op": "call"
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "c1",
+                                    "op": "=",
+                                    "right": 0
+                                }
                             },
                             "op": "∧",
                             "right": {
-                                "args": [
-                                    "c1",
-                                    "c2"
-                                ],
-                                "function": "busy",
-                                "op": "call"
+                                "left": {
+                                    "left": "x1",
+                                    "op": "=",
+                                    "right": 0
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "s1",
+                                    "op": "=",
+                                    "right": 10
+                                }
                             }
                         }
                     },
@@ -4329,333 +4978,6 @@
                                 "left": "x1",
                                 "op": "<",
                                 "right": 4
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x1 <- (min((x1 + 1), 11))",
-                                    "ref": "x1",
-                                    "value": {
-                                        "left": {
-                                            "left": "x1",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 11
-                                    }
-                                },
-                                {
-                                    "comment": "time <- 50",
-                                    "ref": "time",
-                                    "value": 50
-                                },
-                                {
-                                    "comment": "cost <- (((((((((((c1 = 0) & (c2 = 0)) ? 50 : 0) + (((c1 + c2) = 1) ? 500 : 0)) + (((c1 = 1) & (c2 = 1)) ? 1000 : 0)) + (((((c1 = 0) & (c2 = 2)) & (bc1 = 0)) & (bc2 = 0)) ? 500 : 0)) + (((((c1 = 2) & (c2 = 0)) & (bc1 = 0)) & (bc2 = 0)) ? 500 : 0)) + (((((c1 = 2) & (c2 = 2)) & (bc1 = 0)) & (bc2 = 0)) ? 1000 : 0)) + ((((c1 = 0) & (c2 = 2)) & ((bc1 > 0) | (bc2 > 0))) ? 50000 : 0)) + ((((c1 = 2) & (c2 = 0)) & ((bc1 > 0) | (bc2 > 0))) ? 50000 : 0)) + ((((c1 = 2) & (c2 = 2)) & ((bc1 > 0) | (bc2 > 0))) ? 100000 : 0))",
-                                    "ref": "cost",
-                                    "value": {
-                                        "left": {
-                                            "left": {
-                                                "left": {
-                                                    "left": {
-                                                        "else": 0.0,
-                                                        "if": {
-                                                            "left": {
-                                                                "left": {
-                                                                    "left": "c1",
-                                                                    "op": "=",
-                                                                    "right": 2
-                                                                },
-                                                                "op": "∧",
-                                                                "right": {
-                                                                    "left": "c2",
-                                                                    "op": "=",
-                                                                    "right": 2
-                                                                }
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": {
-                                                                    "left": "bc1",
-                                                                    "op": ">",
-                                                                    "right": 0
-                                                                },
-                                                                "op": "∨",
-                                                                "right": {
-                                                                    "left": "bc2",
-                                                                    "op": ">",
-                                                                    "right": 0
-                                                                }
-                                                            }
-                                                        },
-                                                        "op": "ite",
-                                                        "then": 100000
-                                                    },
-                                                    "op": "+",
-                                                    "right": {
-                                                        "else": 0.0,
-                                                        "if": {
-                                                            "left": {
-                                                                "left": "c1",
-                                                                "op": "+",
-                                                                "right": "c2"
-                                                            },
-                                                            "op": "=",
-                                                            "right": 1
-                                                        },
-                                                        "op": "ite",
-                                                        "then": 500
-                                                    }
-                                                },
-                                                "op": "+",
-                                                "right": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "bc2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 500
-                                                }
-                                            },
-                                            "op": "+",
-                                            "right": {
-                                                "left": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": ">",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∨",
-                                                            "right": {
-                                                                "left": "bc2",
-                                                                "op": ">",
-                                                                "right": 0
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 50000
-                                                },
-                                                "op": "+",
-                                                "right": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": "c1",
-                                                            "op": "=",
-                                                            "right": 1
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": "c2",
-                                                            "op": "=",
-                                                            "right": 1
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 1000
-                                                }
-                                            }
-                                        },
-                                        "op": "+",
-                                        "right": {
-                                            "left": {
-                                                "left": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": ">",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∨",
-                                                            "right": {
-                                                                "left": "bc2",
-                                                                "op": ">",
-                                                                "right": 0
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 50000
-                                                },
-                                                "op": "+",
-                                                "right": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": "c1",
-                                                            "op": "=",
-                                                            "right": 0
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": "c2",
-                                                            "op": "=",
-                                                            "right": 0
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 50
-                                                }
-                                            },
-                                            "op": "+",
-                                            "right": {
-                                                "left": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "bc2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 1000
-                                                },
-                                                "op": "+",
-                                                "right": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "bc2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 500
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s1 = 9) & (x1 < 10))",
-                        "exp": {
-                            "left": {
-                                "left": "s1",
-                                "op": "=",
-                                "right": 9
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x1",
-                                "op": "<",
-                                "right": 10
                             }
                         }
                     },
@@ -5340,328 +5662,6 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "s1 <- 6",
-                                    "ref": "s1",
-                                    "value": 6
-                                },
-                                {
-                                    "comment": "time <- 50",
-                                    "ref": "time",
-                                    "value": 50
-                                },
-                                {
-                                    "comment": "cost <- (((((((((((c1 = 0) & (c2 = 0)) ? 50 : 0) + (((c1 + c2) = 1) ? 500 : 0)) + (((c1 = 1) & (c2 = 1)) ? 1000 : 0)) + (((((c1 = 0) & (c2 = 2)) & (bc1 = 0)) & (bc2 = 0)) ? 500 : 0)) + (((((c1 = 2) & (c2 = 0)) & (bc1 = 0)) & (bc2 = 0)) ? 500 : 0)) + (((((c1 = 2) & (c2 = 2)) & (bc1 = 0)) & (bc2 = 0)) ? 1000 : 0)) + ((((c1 = 0) & (c2 = 2)) & ((bc1 > 0) | (bc2 > 0))) ? 50000 : 0)) + ((((c1 = 2) & (c2 = 0)) & ((bc1 > 0) | (bc2 > 0))) ? 50000 : 0)) + ((((c1 = 2) & (c2 = 2)) & ((bc1 > 0) | (bc2 > 0))) ? 100000 : 0))",
-                                    "ref": "cost",
-                                    "value": {
-                                        "left": {
-                                            "left": {
-                                                "left": {
-                                                    "left": {
-                                                        "else": 0.0,
-                                                        "if": {
-                                                            "left": {
-                                                                "left": {
-                                                                    "left": "c1",
-                                                                    "op": "=",
-                                                                    "right": 2
-                                                                },
-                                                                "op": "∧",
-                                                                "right": {
-                                                                    "left": "c2",
-                                                                    "op": "=",
-                                                                    "right": 2
-                                                                }
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": {
-                                                                    "left": "bc1",
-                                                                    "op": ">",
-                                                                    "right": 0
-                                                                },
-                                                                "op": "∨",
-                                                                "right": {
-                                                                    "left": "bc2",
-                                                                    "op": ">",
-                                                                    "right": 0
-                                                                }
-                                                            }
-                                                        },
-                                                        "op": "ite",
-                                                        "then": 100000
-                                                    },
-                                                    "op": "+",
-                                                    "right": {
-                                                        "else": 0.0,
-                                                        "if": {
-                                                            "left": {
-                                                                "left": "c1",
-                                                                "op": "+",
-                                                                "right": "c2"
-                                                            },
-                                                            "op": "=",
-                                                            "right": 1
-                                                        },
-                                                        "op": "ite",
-                                                        "then": 500
-                                                    }
-                                                },
-                                                "op": "+",
-                                                "right": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "bc2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 500
-                                                }
-                                            },
-                                            "op": "+",
-                                            "right": {
-                                                "left": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": ">",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∨",
-                                                            "right": {
-                                                                "left": "bc2",
-                                                                "op": ">",
-                                                                "right": 0
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 50000
-                                                },
-                                                "op": "+",
-                                                "right": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": "c1",
-                                                            "op": "=",
-                                                            "right": 1
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": "c2",
-                                                            "op": "=",
-                                                            "right": 1
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 1000
-                                                }
-                                            }
-                                        },
-                                        "op": "+",
-                                        "right": {
-                                            "left": {
-                                                "left": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": ">",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∨",
-                                                            "right": {
-                                                                "left": "bc2",
-                                                                "op": ">",
-                                                                "right": 0
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 50000
-                                                },
-                                                "op": "+",
-                                                "right": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": "c1",
-                                                            "op": "=",
-                                                            "right": 0
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": "c2",
-                                                            "op": "=",
-                                                            "right": 0
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 50
-                                                }
-                                            },
-                                            "op": "+",
-                                            "right": {
-                                                "left": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "bc2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 1000
-                                                },
-                                                "op": "+",
-                                                "right": {
-                                                    "else": 0.0,
-                                                    "if": {
-                                                        "left": {
-                                                            "left": {
-                                                                "left": "bc2",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c2",
-                                                                "op": "=",
-                                                                "right": 2
-                                                            }
-                                                        },
-                                                        "op": "∧",
-                                                        "right": {
-                                                            "left": {
-                                                                "left": "bc1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            },
-                                                            "op": "∧",
-                                                            "right": {
-                                                                "left": "c1",
-                                                                "op": "=",
-                                                                "right": 0
-                                                            }
-                                                        }
-                                                    },
-                                                    "op": "ite",
-                                                    "then": 500
-                                                }
-                                            }
-                                        }
-                                    }
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s1 = 6) & busy(c1, c2))",
-                        "exp": {
-                            "left": {
-                                "left": "s1",
-                                "op": "=",
-                                "right": 6
-                            },
-                            "op": "∧",
-                            "right": {
-                                "args": [
-                                    "c1",
-                                    "c2"
-                                ],
-                                "function": "busy",
-                                "op": "call"
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
                                     "comment": "s1 <- 12",
                                     "ref": "s1",
                                     "value": 12
@@ -5977,7 +5977,38 @@
                 }
             ],
             "name": "station1",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "x1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 11
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "slot1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 1
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "backoff1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 15
+                    }
+                }
+            ]
         },
         {
             "edges": [
@@ -5991,35 +6022,27 @@
                                     "value": 0
                                 },
                                 {
-                                    "comment": "s2 <- 8",
+                                    "comment": "s2 <- 3",
                                     "ref": "s2",
-                                    "value": 8
+                                    "value": 3
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "((s2 = 1) & ((x2 = 3) | (x2 = (3 - 1))))",
+                        "comment": "((s2 = 11) & (x2 = 6))",
                         "exp": {
                             "left": {
                                 "left": "s2",
                                 "op": "=",
-                                "right": 1
+                                "right": 11
                             },
                             "op": "∧",
                             "right": {
-                                "left": {
-                                    "left": "x2",
-                                    "op": "=",
-                                    "right": 3
-                                },
-                                "op": "∨",
-                                "right": {
-                                    "left": "x2",
-                                    "op": "=",
-                                    "right": 2
-                                }
+                                "left": "x2",
+                                "op": "=",
+                                "right": 6
                             }
                         }
                     },
@@ -6970,6 +6993,50 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 8",
+                                    "ref": "s2",
+                                    "value": 8
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 1) & ((x2 = 3) | (x2 = (3 - 1))))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": {
+                                    "left": "x2",
+                                    "op": "=",
+                                    "right": 3
+                                },
+                                "op": "∨",
+                                "right": {
+                                    "left": "x2",
+                                    "op": "=",
+                                    "right": 2
+                                }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
                                     "comment": "s2 <- 2",
                                     "ref": "s2",
                                     "value": 2
@@ -7002,42 +7069,6 @@
                                 ],
                                 "function": "busy",
                                 "op": "call"
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x2 <- 0",
-                                    "ref": "x2",
-                                    "value": 0
-                                },
-                                {
-                                    "comment": "s2 <- 3",
-                                    "ref": "s2",
-                                    "value": 3
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s2 = 11) & (x2 = 6))",
-                        "exp": {
-                            "left": {
-                                "left": "s2",
-                                "op": "=",
-                                "right": 11
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x2",
-                                "op": "=",
-                                "right": 6
                             }
                         }
                     },
@@ -7099,51 +7130,6 @@
                                     "value": 0
                                 },
                                 {
-                                    "comment": "s2 <- 10",
-                                    "ref": "s2",
-                                    "value": 10
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(((s2 = 9) & (x2 >= 4)) & (c2 = 1))",
-                        "exp": {
-                            "left": {
-                                "left": {
-                                    "left": "s2",
-                                    "op": "=",
-                                    "right": 9
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "x2",
-                                    "op": "≥",
-                                    "right": 4
-                                }
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "c2",
-                                "op": "=",
-                                "right": 1
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "finish2",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x2 <- 0",
-                                    "ref": "x2",
-                                    "value": 0
-                                },
-                                {
                                     "comment": "s2 <- 12",
                                     "ref": "s2",
                                     "value": 12
@@ -7186,6 +7172,51 @@
                                     "op": "=",
                                     "right": 3
                                 }
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "finish2",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- 0",
+                                    "ref": "x2",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "s2 <- 10",
+                                    "ref": "s2",
+                                    "value": 10
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s2 = 9) & (x2 >= 4)) & (c2 = 1))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s2",
+                                    "op": "=",
+                                    "right": 9
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "x2",
+                                    "op": "≥",
+                                    "right": 4
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "c2",
+                                "op": "=",
+                                "right": 1
                             }
                         }
                     },
@@ -7323,57 +7354,6 @@
                         }
                     ],
                     "guard": {
-                        "comment": "(((s2 = 5) & (x2 < 1)) & free(c2, c1))",
-                        "exp": {
-                            "left": {
-                                "left": {
-                                    "left": "s2",
-                                    "op": "=",
-                                    "right": 5
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "x2",
-                                    "op": "<",
-                                    "right": 1
-                                }
-                            },
-                            "op": "∧",
-                            "right": {
-                                "args": [
-                                    "c2",
-                                    "c1"
-                                ],
-                                "function": "free",
-                                "op": "call"
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x2 <- (min((x2 + 1), 11))",
-                                    "ref": "x2",
-                                    "value": {
-                                        "left": {
-                                            "left": "x2",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 11
-                                    }
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
                         "comment": "(((s2 = 1) & (x2 < 3)) & free(c2, c1))",
                         "exp": {
                             "left": {
@@ -7396,6 +7376,41 @@
                                     "c1"
                                 ],
                                 "function": "free",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 2",
+                                    "ref": "s2",
+                                    "value": 2
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 2) & busy(c2, c1))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "c2",
+                                    "c1"
+                                ],
+                                "function": "busy",
                                 "op": "call"
                             }
                         }
@@ -7447,6 +7462,92 @@
                                     "c1"
                                 ],
                                 "function": "free",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- (min((x2 + 1), 11))",
+                                    "ref": "x2",
+                                    "value": {
+                                        "left": {
+                                            "left": "x2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 11
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(((s2 = 5) & (x2 < 1)) & free(c2, c1))",
+                        "exp": {
+                            "left": {
+                                "left": {
+                                    "left": "s2",
+                                    "op": "=",
+                                    "right": 5
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "x2",
+                                    "op": "<",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "c2",
+                                    "c1"
+                                ],
+                                "function": "free",
+                                "op": "call"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 6",
+                                    "ref": "s2",
+                                    "value": 6
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s2 = 6) & busy(c2, c1))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "args": [
+                                    "c2",
+                                    "c1"
+                                ],
+                                "function": "busy",
                                 "op": "call"
                             }
                         }
@@ -7567,6 +7668,46 @@
                         }
                     ],
                     "guard": {
+                        "comment": "((s2 = 9) & (x2 < 10))",
+                        "exp": {
+                            "left": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 9
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x2",
+                                "op": "<",
+                                "right": 10
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x2 <- (min((x2 + 1), 11))",
+                                    "ref": "x2",
+                                    "value": {
+                                        "left": {
+                                            "left": "x2",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 11
+                                    }
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
                         "comment": "((((s2 = 10) & (c2 = 0)) & (x2 = 0)) & free(c2, c1))",
                         "exp": {
                             "left": {
@@ -7598,41 +7739,6 @@
                                     "op": "=",
                                     "right": 10
                                 }
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "s2 <- 2",
-                                    "ref": "s2",
-                                    "value": 2
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s2 = 2) & busy(c2, c1))",
-                        "exp": {
-                            "left": {
-                                "left": "s2",
-                                "op": "=",
-                                "right": 2
-                            },
-                            "op": "∧",
-                            "right": {
-                                "args": [
-                                    "c2",
-                                    "c1"
-                                ],
-                                "function": "busy",
-                                "op": "call"
                             }
                         }
                     },
@@ -7681,46 +7787,6 @@
                                 "left": "x2",
                                 "op": "<",
                                 "right": 4
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x2 <- (min((x2 + 1), 11))",
-                                    "ref": "x2",
-                                    "value": {
-                                        "left": {
-                                            "left": "x2",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 11
-                                    }
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s2 = 9) & (x2 < 10))",
-                        "exp": {
-                            "left": {
-                                "left": "s2",
-                                "op": "=",
-                                "right": 9
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x2",
-                                "op": "<",
-                                "right": 10
                             }
                         }
                     },
@@ -7831,41 +7897,6 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "s2 <- 6",
-                                    "ref": "s2",
-                                    "value": 6
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s2 = 6) & busy(c2, c1))",
-                        "exp": {
-                            "left": {
-                                "left": "s2",
-                                "op": "=",
-                                "right": 6
-                            },
-                            "op": "∧",
-                            "right": {
-                                "args": [
-                                    "c2",
-                                    "c1"
-                                ],
-                                "function": "busy",
-                                "op": "call"
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
                                     "comment": "s2 <- 12",
                                     "ref": "s2",
                                     "value": 12
@@ -7894,7 +7925,38 @@
                 }
             ],
             "name": "station2",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "x2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 11
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "slot2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 1
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "backoff2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 15
+                    }
+                }
+            ]
         }
     ],
     "constants": [
@@ -7955,7 +8017,8 @@
     ],
     "features": [
         "derived-operators",
-        "functions"
+        "functions",
+        "multi-objective-properties"
     ],
     "functions": [
         {
@@ -8221,6 +8284,168 @@
                 }
             },
             "name": "time_min"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "cost",
+                                "op": "Emin",
+                                "reach": {
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 12
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 12
+                                    }
+                                }
+                            },
+                            "opt": "min"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "time",
+                                "op": "Emin",
+                                "reach": {
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 12
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 12
+                                    }
+                                }
+                            },
+                            "opt": "min"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi_pos"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": {
+                                        "left": "col",
+                                        "op": "=",
+                                        "right": "COL"
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "cost",
+                                "op": "Emax",
+                                "reach": {
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 12
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 12
+                                    }
+                                }
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "collisions",
+                                "op": "Emax",
+                                "reach": {
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 12
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 12
+                                    }
+                                }
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "time",
+                                "op": "Emax",
+                                "reach": {
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 12
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 12
+                                    }
+                                }
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi_neg"
         }
     ],
     "restrict-initial": {
@@ -8336,16 +8561,6 @@
             }
         },
         {
-            "initial-value": 0,
-            "name": "x1",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 11
-            }
-        },
-        {
             "initial-value": 1,
             "name": "s1",
             "type": {
@@ -8353,26 +8568,6 @@
                 "kind": "bounded",
                 "lower-bound": 1,
                 "upper-bound": 12
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "slot1",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 1
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "backoff1",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 15
             }
         },
         {
@@ -8386,16 +8581,6 @@
             }
         },
         {
-            "initial-value": 0,
-            "name": "x2",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 11
-            }
-        },
-        {
             "initial-value": 1,
             "name": "s2",
             "type": {
@@ -8403,26 +8588,6 @@
                 "kind": "bounded",
                 "lower-bound": 1,
                 "upper-bound": 12
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "slot2",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 1
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "backoff2",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 15
             }
         },
         {

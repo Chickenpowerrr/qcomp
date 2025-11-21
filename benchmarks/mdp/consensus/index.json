@@ -11,11 +11,11 @@
 			"notes": "Initial version.",
 			"version": 1
 		},
-        {
+		{
 			"version": 2,
 			"date": "2025-11-12",
 			"notes": "Added properties `multi_pos´ and `multi_neg´."
-        }
+		}
 	],
 	"author": [
 		"James Aspnes <james.aspnes@yale.edu>",
@@ -75,13 +75,13 @@
 		},
 		{
 			"name": "multi_pos",
-            "type": "multi-tradeoff",
-            "description": "The best value for `steps_min´ given that `c1´ must be satisfied."
+			"type": "multi-tradeoff",
+			"description": "The best value for `steps_min´ given that `c1´ must be satisfied."
 		},
 		{
 			"name": "multi_neg",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between undesired properties `disagree´ and `steps_max´."
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between undesired properties `disagree´ and `steps_max´."
 		}
 	],
 	"files": [
@@ -93,9 +93,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism consensus.2.prism --tojani consensus.2.jani --prop consensus.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.2.prism --prop consensus.props --tojani consensus.2.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -310,9 +310,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism consensus.4.prism --tojani consensus.4.jani --prop consensus.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.4.prism --prop consensus.props --tojani consensus.4.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -429,9 +429,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism consensus.6.prism --tojani consensus.6.jani --prop consensus.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.6.prism --prop consensus.props --tojani consensus.6.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -499,9 +499,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism consensus.8.prism --tojani consensus.8.jani --prop consensus.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.8.prism --prop consensus.props --tojani consensus.8.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -550,9 +550,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism consensus.10.prism --tojani consensus.10.jani --prop consensus.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism consensus.10.prism --prop consensus.props --tojani consensus.10.jani"
 			},
 			"file-parameter-values": [
 				{

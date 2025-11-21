@@ -11,12 +11,12 @@
 			"notes": "Initial version.",
 			"version": 1
 		}
-    ],
+	],
 	"author": [
 		"Arnd Hartmanns",
-        "Sebastian Junges",
-        "Joost-Pieter Katoen",
-        "Tim Quatmann"
+		"Sebastian Junges",
+		"Joost-Pieter Katoen",
+		"Tim Quatmann"
 	],
 	"submitter": "Mark van Wijk <mark.vanwijk@utwente.nl>",
 	"source": "https://github.com/tquatmann/qcomp23-multi/tree/main/models/rov",
@@ -25,7 +25,9 @@
 		"url": "https://github.com/tquatmann/qcomp23-multi"
 	},
 	"description": "This model was part of the multi-objective benchmarking suite for QComp 2023 [0]. We consider a Mars rover that has to plan tasks with probabilistic success, under time, energy, and scientific value constraints. See [1] for more details",
-	"references": ["https://doi.org/10.1007/s10817-020-09574-9"],
+	"references": [
+		"https://doi.org/10.1007/s10817-020-09574-9"
+	],
 	"notes": "QComp 2023 multi-objective benchmark",
 	"parameters": [
 		{
@@ -34,19 +36,19 @@
 			"description": "0: Don't unfold any rewards, 1: Unfold the value rewards, 2: Unfold all rewards",
 			"type": "positive integer"
 		},
-        {
-            "name": "B",
-            "kind": "open",
-            "description": "Magnitude of bounds for global rewards",
-            "type": "positive integer"
-        }
+		{
+			"name": "B",
+			"kind": "open",
+			"description": "Magnitude of bounds for global rewards",
+			"type": "positive integer"
+		}
 	],
 	"properties": [
 		{
 			"name": "lazy",
 			"description": "The tradeoff between the minimum time and energy spent.",
 			"type": "multi-tradeoff"
-		},	
+		},
 		{
 			"name": "max_value_bounded",
 			"description": "The maximum probability of obtaining at least a given scientific value, while staying in the time and energy constraints.",
@@ -67,7 +69,7 @@
 			"description": "The tradeoff between maximising the probability of obtaining at least a given scientific value, and the maximum probability of staying in the time and energy constraints.",
 			"type": "multi-tradeoff"
 		}
-    ],
+	],
 	"files": [
 		{
 			"file": "mars-rover.jani",
@@ -77,13 +79,13 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.8.2 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism mars-rover.prism --prop mars-rover.props --tojani mars-rover.jani"
 			},
-            "file-parameter-values": [],
+			"file-parameter-values": [],
 			"open-parameter-values": [
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -95,7 +97,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -107,7 +109,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -119,7 +121,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -131,7 +133,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -143,7 +145,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -155,7 +157,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -167,7 +169,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -179,7 +181,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -191,7 +193,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -203,7 +205,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -215,7 +217,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -227,8 +229,8 @@
 						}
 					]
 				}
-            ]
+			]
 		}
-    ],
+	],
 	"results": []
 }

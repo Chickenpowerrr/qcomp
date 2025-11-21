@@ -11,11 +11,11 @@
 			"notes": "Initial version.",
 			"version": 1
 		},
-        {
+		{
 			"version": 2,
 			"date": "2025-11-13",
 			"notes": "Added property `multi´."
-        }
+		}
 	],
 	"author": [
 		"Marta Kwiatkowska <Marta.Kwiatkowska@cs.ox.ac.uk>",
@@ -55,12 +55,12 @@
 			"description": "Minimum expected time for both stations to send correctly.",
 			"type": "exp-reward"
 		},
-        {
-            "name": "multi_pos",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between desired properties `cost_min´ and `time_min´."
-        }
-    ],
+		{
+			"name": "multi_pos",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between desired properties `cost_min´ and `time_min´."
+		}
+	],
 	"files": [
 		{
 			"file": "wlan-mec.1.jani",
@@ -70,9 +70,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan-mec.1.prism --tojani wlan-mec.1.jani --prop wlan-mec.props"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan-mec.1.prism --prop wlan-mec.props --tojani wlan-mec.1.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -90,7 +90,8 @@
 					]
 				}
 			]
-		},{
+		},
+		{
 			"file": "wlan-mec.2.jani",
 			"original-file": [
 				"wlan-mec.2.prism",
@@ -98,9 +99,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan-mec.0.prism --tojani wlan-mec.0.jani --prop wlan-mec.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan-mec.2.prism --prop wlan-mec.props --tojani wlan-mec.2.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -127,9 +128,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan-mec.0.prism --tojani wlan-mec.0.jani --prop wlan-mec.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan-mec.3.prism --prop wlan-mec.props --tojani wlan-mec.3.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -156,9 +157,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan-mec.0.prism --tojani wlan-mec.0.jani --prop wlan-mec.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan-mec.4.prism --prop wlan-mec.props --tojani wlan-mec.4.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -185,9 +186,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan-mec.0.prism --tojani wlan-mec.0.jani --prop wlan-mec.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan-mec.5.prism --prop wlan-mec.props --tojani wlan-mec.5.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -207,6 +208,5 @@
 			]
 		}
 	],
-	"results": [
-	]
+	"results": []
 }

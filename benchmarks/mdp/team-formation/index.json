@@ -11,12 +11,12 @@
 			"notes": "Initial version.",
 			"version": 1
 		}
-    ],
+	],
 	"author": [
 		"Taolue Chen",
-        "Marta Kwiatkowska",
-        "David Parker",
-        "Aistis Simaitis"
+		"Marta Kwiatkowska",
+		"David Parker",
+		"Aistis Simaitis"
 	],
 	"submitter": "Mark van Wijk <mark.vanwijk@utwente.nl>",
 	"source": "https://github.com/tquatmann/qcomp23-multi/tree/main/models/tea",
@@ -25,7 +25,9 @@
 		"url": "https://github.com/tquatmann/qcomp23-multi"
 	},
 	"description": "This model was part of the multi-objective benchmarking suite for QComp 2023 [0]. Models a network with different sensors that form teams to solve tasks. See [1] for more details",
-	"references": ["https://doi.org/10.1007/978-3-642-22359-4_14"],
+	"references": [
+		"https://doi.org/10.1007/978-3-642-22359-4_14"
+	],
 	"notes": "QComp 2023 multi-objective benchmark",
 	"parameters": [
 		{
@@ -40,7 +42,7 @@
 			"name": "tradeoff_finish1_teamsize",
 			"description": "The tradeoff between maximising the probability of success for the first task, and maximising the size of a successful team.",
 			"type": "multi-tradeoff"
-		},	
+		},
 		{
 			"name": "tradeoff_finish1_finish_teamsize",
 			"description": "The tradeoff between maximising the probability of success for the first task, second task, and maximising the size of a successful team.",
@@ -52,70 +54,82 @@
 			"file": "team-formation.2.jani",
 			"original-file": [
 				"team-formation.2.prism",
-				"team-formation.2.props"
+				"team-formation.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.8.2 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism team-formation.2.prism --prop team-formation.props --tojani team-formation.2.jani"
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "N", "value": 2 }
+				{
+					"name": "N",
+					"value": 2
+				}
 			]
 		},
 		{
 			"file": "team-formation.3.jani",
 			"original-file": [
 				"team-formation.3.prism",
-				"team-formation.3.props"
+				"team-formation.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.8.2 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism team-formation.3.prism --prop team-formation.props --tojani team-formation.3.jani"
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "N", "value": 3 }
+				{
+					"name": "N",
+					"value": 3
+				}
 			]
 		},
-        {
+		{
 			"file": "team-formation.4.jani",
 			"original-file": [
 				"team-formation.4.prism",
-				"team-formation.4.props"
+				"team-formation.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.8.2 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism team-formation.4.prism --prop team-formation.props --tojani team-formation.4.jani"
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "N", "value": 4 }
+				{
+					"name": "N",
+					"value": 4
+				}
 			]
 		},
-        {
+		{
 			"file": "team-formation.5.jani",
 			"original-file": [
 				"team-formation.5.prism",
-				"team-formation.5.props"
+				"team-formation.props"
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.8.2 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism team-formation.5.prism --prop team-formation.props --tojani team-formation.5.jani"
 			},
 			"open-parameter-values": [],
 			"file-parameter-values": [
-				{ "name": "N", "value": 5 }
+				{
+					"name": "N",
+					"value": 5
+				}
 			]
 		}
-    ],
+	],
 	"results": []
 }

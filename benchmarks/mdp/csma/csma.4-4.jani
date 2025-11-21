@@ -370,6 +370,30 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "b <- 1",
+                                    "ref": "b",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(b = 0)",
+                        "exp": {
+                            "left": "b",
+                            "op": "=",
+                            "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "send1",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
                                     "comment": "b <- 2",
                                     "ref": "b",
                                     "value": 2
@@ -400,30 +424,6 @@
                                 "op": "<",
                                 "right": 1
                             }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "send1",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "b <- 1",
-                                    "ref": "b",
-                                    "value": 1
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(b = 0)",
-                        "exp": {
-                            "left": "b",
-                            "op": "=",
-                            "right": 0
                         }
                     },
                     "location": "l"
@@ -919,7 +919,28 @@
                 }
             ],
             "name": "bus",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "y1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 2
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "y2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 2
+                    }
+                }
+            ]
         },
         {
             "edges": [
@@ -1803,33 +1824,6 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "s1 <- s1",
-                                    "ref": "s1",
-                                    "value": "s1"
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "!((s1 = 1))",
-                        "exp": {
-                            "exp": {
-                                "left": "s1",
-                                "op": "=",
-                                "right": 1
-                            },
-                            "op": "¬"
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "cd",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
                                     "comment": "s1 <- 2",
                                     "ref": "s1",
                                     "value": 2
@@ -1862,6 +1856,33 @@
                             "left": "s1",
                             "op": "=",
                             "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "cd",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- s1",
+                                    "ref": "s1",
+                                    "value": "s1"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "!((s1 = 1))",
+                        "exp": {
+                            "exp": {
+                                "left": "s1",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "¬"
                         }
                     },
                     "location": "l"
@@ -2136,7 +2157,28 @@
                 }
             ],
             "name": "station1",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "x1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 30
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "bc1",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 15
+                    }
+                }
+            ]
         },
         {
             "edges": [
@@ -3020,33 +3062,6 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "s2 <- s2",
-                                    "ref": "s2",
-                                    "value": "s2"
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "!((s2 = 1))",
-                        "exp": {
-                            "exp": {
-                                "left": "s2",
-                                "op": "=",
-                                "right": 1
-                            },
-                            "op": "¬"
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "cd",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
                                     "comment": "s2 <- 2",
                                     "ref": "s2",
                                     "value": 2
@@ -3079,6 +3094,33 @@
                             "left": "s2",
                             "op": "=",
                             "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "cd",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- s2",
+                                    "ref": "s2",
+                                    "value": "s2"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "!((s2 = 1))",
+                        "exp": {
+                            "exp": {
+                                "left": "s2",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "¬"
                         }
                     },
                     "location": "l"
@@ -3353,7 +3395,28 @@
                 }
             ],
             "name": "station2",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "x2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 30
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "bc2",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 15
+                    }
+                }
+            ]
         },
         {
             "edges": [
@@ -4237,33 +4300,6 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "s3 <- s3",
-                                    "ref": "s3",
-                                    "value": "s3"
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "!((s3 = 1))",
-                        "exp": {
-                            "exp": {
-                                "left": "s3",
-                                "op": "=",
-                                "right": 1
-                            },
-                            "op": "¬"
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "cd",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
                                     "comment": "s3 <- 2",
                                     "ref": "s3",
                                     "value": 2
@@ -4296,6 +4332,33 @@
                             "left": "s3",
                             "op": "=",
                             "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "cd",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s3 <- s3",
+                                    "ref": "s3",
+                                    "value": "s3"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "!((s3 = 1))",
+                        "exp": {
+                            "exp": {
+                                "left": "s3",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "¬"
                         }
                     },
                     "location": "l"
@@ -4570,7 +4633,28 @@
                 }
             ],
             "name": "station3",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "x3",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 30
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "bc3",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 15
+                    }
+                }
+            ]
         },
         {
             "edges": [
@@ -5454,33 +5538,6 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "s4 <- s4",
-                                    "ref": "s4",
-                                    "value": "s4"
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "!((s4 = 1))",
-                        "exp": {
-                            "exp": {
-                                "left": "s4",
-                                "op": "=",
-                                "right": 1
-                            },
-                            "op": "¬"
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "cd",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
                                     "comment": "s4 <- 2",
                                     "ref": "s4",
                                     "value": 2
@@ -5513,6 +5570,33 @@
                             "left": "s4",
                             "op": "=",
                             "right": 1
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "cd",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s4 <- s4",
+                                    "ref": "s4",
+                                    "value": "s4"
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "!((s4 = 1))",
+                        "exp": {
+                            "exp": {
+                                "left": "s4",
+                                "op": "=",
+                                "right": 1
+                            },
+                            "op": "¬"
                         }
                     },
                     "location": "l"
@@ -5787,7 +5871,28 @@
                 }
             ],
             "name": "station4",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "x4",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 30
+                    }
+                },
+                {
+                    "initial-value": 0,
+                    "name": "bc4",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 15
+                    }
+                }
+            ]
         }
     ],
     "constants": [
@@ -5824,7 +5929,8 @@
     ],
     "features": [
         "derived-operators",
-        "functions"
+        "functions",
+        "multi-objective-properties"
     ],
     "functions": [
         {
@@ -6135,6 +6241,151 @@
                 }
             },
             "name": "time_min"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": {
+                                        "exp": "collision_max_backoff",
+                                        "op": "¬"
+                                    },
+                                    "op": "U",
+                                    "right": "all_delivered"
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "time",
+                                "op": "Emin",
+                                "reach": "all_delivered"
+                            },
+                            "opt": "min"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi_pos"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": {
+                                        "exp": "collision_max_backoff",
+                                        "op": "¬"
+                                    },
+                                    "op": "U",
+                                    "right": "all_delivered"
+                                },
+                                "op": "Pmin"
+                            },
+                            "opt": "min"
+                        },
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": {
+                                        "left": {
+                                            "left": {
+                                                "left": {
+                                                    "else": 5,
+                                                    "if": {
+                                                        "left": "s4",
+                                                        "op": "=",
+                                                        "right": 4
+                                                    },
+                                                    "op": "ite",
+                                                    "then": "cd4"
+                                                },
+                                                "op": "min",
+                                                "right": {
+                                                    "else": 5,
+                                                    "if": {
+                                                        "left": "s2",
+                                                        "op": "=",
+                                                        "right": 4
+                                                    },
+                                                    "op": "ite",
+                                                    "then": "cd2"
+                                                }
+                                            },
+                                            "op": "min",
+                                            "right": {
+                                                "left": {
+                                                    "else": 5,
+                                                    "if": {
+                                                        "left": "s3",
+                                                        "op": "=",
+                                                        "right": 4
+                                                    },
+                                                    "op": "ite",
+                                                    "then": "cd3"
+                                                },
+                                                "op": "min",
+                                                "right": {
+                                                    "else": 5,
+                                                    "if": {
+                                                        "left": "s1",
+                                                        "op": "=",
+                                                        "right": 4
+                                                    },
+                                                    "op": "ite",
+                                                    "then": "cd1"
+                                                }
+                                            }
+                                        },
+                                        "op": "<",
+                                        "right": 4
+                                    }
+                                },
+                                "op": "Pmin"
+                            },
+                            "opt": "min"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "time",
+                                "op": "Emax",
+                                "reach": "all_delivered"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi_neg"
         }
     ],
     "restrict-initial": {
@@ -6339,52 +6590,12 @@
         },
         {
             "initial-value": 0,
-            "name": "y1",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 2
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "y2",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 2
-            }
-        },
-        {
-            "initial-value": 0,
             "name": "s1",
             "type": {
                 "base": "int",
                 "kind": "bounded",
                 "lower-bound": 0,
                 "upper-bound": 5
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "x1",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 30
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "bc1",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 15
             }
         },
         {
@@ -6409,26 +6620,6 @@
         },
         {
             "initial-value": 0,
-            "name": "x2",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 30
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "bc2",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 15
-            }
-        },
-        {
-            "initial-value": 0,
             "name": "cd2",
             "type": {
                 "base": "int",
@@ -6449,26 +6640,6 @@
         },
         {
             "initial-value": 0,
-            "name": "x3",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 30
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "bc3",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 15
-            }
-        },
-        {
-            "initial-value": 0,
             "name": "cd3",
             "type": {
                 "base": "int",
@@ -6485,26 +6656,6 @@
                 "kind": "bounded",
                 "lower-bound": 0,
                 "upper-bound": 5
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "x4",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 30
-            }
-        },
-        {
-            "initial-value": 0,
-            "name": "bc4",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 15
             }
         },
         {

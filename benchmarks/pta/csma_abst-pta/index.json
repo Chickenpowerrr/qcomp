@@ -16,7 +16,7 @@
 			"notes": "Fixed type error of power expressions in JANI code.",
 			"version": 2
 		},
-        {
+		{
 			"date": "2025-11-12",
 			"notes": "Added property `multi_neg´.",
 			"version": 3
@@ -66,10 +66,10 @@
 			"type": "prob-reach"
 		},
 		{
-            "name": "multi_neg",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between undesired properties `deadline_min´ and `eventually´."
-        }
+			"name": "multi_neg",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between undesired properties `deadline_min´ and `eventually´."
+		}
 	],
 	"files": [
 		{
@@ -80,9 +80,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.6.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma_abst-pta.prism --tojani csma_abst-pta.jani --prop csma_abst-pta.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma_abst-pta.prism --prop csma_abst-pta.props --tojani csma_abst-pta.jani"
 			},
 			"file-parameter-values": [],
 			"open-parameter-values": [
