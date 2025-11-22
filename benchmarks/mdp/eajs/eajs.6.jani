@@ -7294,45 +7294,10 @@
     ],
     "features": [
         "derived-operators",
-        "functions"
+        "functions",
+        "multi-objective-properties"
     ],
     "functions": [
-        {
-            "body": {
-                "left": {
-                    "left": "loc_4",
-                    "op": "=",
-                    "right": 1
-                },
-                "op": "∧",
-                "right": {
-                    "left": "t_4",
-                    "op": "=",
-                    "right": 0
-                }
-            },
-            "name": "process_4_finishes",
-            "parameters": [],
-            "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": "loc_3",
-                    "op": "=",
-                    "right": 1
-                },
-                "op": "∧",
-                "right": {
-                    "left": "t_3",
-                    "op": "=",
-                    "right": 0
-                }
-            },
-            "name": "process_3_finishes",
-            "parameters": [],
-            "type": "bool"
-        },
         {
             "body": {
                 "left": {
@@ -7348,6 +7313,24 @@
                 }
             },
             "name": "process_1_finishes",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": "loc_6",
+                    "op": "=",
+                    "right": 1
+                },
+                "op": "∧",
+                "right": {
+                    "left": "t_6",
+                    "op": "=",
+                    "right": 0
+                }
+            },
+            "name": "process_6_finishes",
             "parameters": [],
             "type": "bool"
         },
@@ -7388,24 +7371,6 @@
                 }
             },
             "name": "process_2_finishes",
-            "parameters": [],
-            "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": "loc_6",
-                    "op": "=",
-                    "right": 1
-                },
-                "op": "∧",
-                "right": {
-                    "left": "t_6",
-                    "op": "=",
-                    "right": 0
-                }
-            },
-            "name": "process_6_finishes",
             "parameters": [],
             "type": "bool"
         },
@@ -7459,6 +7424,42 @@
                 }
             },
             "name": "process_5_finishes",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": "loc_3",
+                    "op": "=",
+                    "right": 1
+                },
+                "op": "∧",
+                "right": {
+                    "left": "t_3",
+                    "op": "=",
+                    "right": 0
+                }
+            },
+            "name": "process_3_finishes",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": "loc_4",
+                    "op": "=",
+                    "right": 1
+                },
+                "op": "∧",
+                "right": {
+                    "left": "t_4",
+                    "op": "=",
+                    "right": 0
+                }
+            },
+            "name": "process_4_finishes",
             "parameters": [],
             "type": "bool"
         }
@@ -7521,6 +7522,64 @@
                 }
             },
             "name": "ProbUtil"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "utilityLocal",
+                                "op": "Emax",
+                                "reach": {
+                                    "left": "battery_load",
+                                    "op": "=",
+                                    "right": 0
+                                }
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "reward-bounds": [
+                                        {
+                                            "accumulate": [
+                                                "steps"
+                                            ],
+                                            "bounds": {
+                                                "lower": "B",
+                                                "lower-exclusive": false
+                                            },
+                                            "exp": "utilityLocal"
+                                        }
+                                    ],
+                                    "right": {
+                                        "left": "battery_load",
+                                        "op": "=",
+                                        "right": 0
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "Multi"
         }
     ],
     "restrict-initial": {

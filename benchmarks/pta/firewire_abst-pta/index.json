@@ -11,11 +11,11 @@
 			"notes": "Initial version.",
 			"version": 1
 		},
-        {
+		{
 			"version": 2,
 			"date": "2025-11-12",
 			"notes": "Added property `multi´."
-        }
+		}
 	],
 	"author": [
 		"Marielle Stoelinga <marielle@cs.kun.nl>",
@@ -63,11 +63,11 @@
 			"description": "The minimum probability that a leader is eventually elected.",
 			"type": "prob-reach"
 		},
-        {
-            "name": "multi",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between `deadline_min´ and `eventually´."
-        }
+		{
+			"name": "multi",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between `deadline_min´ and `eventually´."
+		}
 	],
 	"files": [
 		{
@@ -78,9 +78,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism firewire_abst-pta.prism --tojani firewire_abst-pta.jani --prop firewire_abst-pta.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism firewire_abst-pta.prism --prop firewire_abst-pta.props --tojani firewire_abst-pta.jani"
 			},
 			"file-parameter-values": [],
 			"open-parameter-values": [

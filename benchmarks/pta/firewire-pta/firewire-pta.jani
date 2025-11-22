@@ -131,6 +131,30 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "w12 <- 3",
+                                    "ref": "w12",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 9)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
                                     "comment": "w12 <- 1",
                                     "ref": "w12",
                                     "value": 1
@@ -184,25 +208,25 @@
                     "location": "l"
                 },
                 {
-                    "action": "rec_idle12",
+                    "action": "rec_req12",
                     "destinations": [
                         {
                             "assignments": [
                                 {
-                                    "comment": "w12 <- 3",
+                                    "comment": "w12 <- 5",
                                     "ref": "w12",
-                                    "value": 3
+                                    "value": 5
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w12 = 9)",
+                        "comment": "(w12 = 8)",
                         "exp": {
                             "left": "w12",
                             "op": "=",
-                            "right": 9
+                            "right": 8
                         }
                     },
                     "location": "l"
@@ -266,59 +290,25 @@
                     "location": "l"
                 },
                 {
-                    "action": "rec_req12",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w12 <- 5",
-                                    "ref": "w12",
-                                    "value": 5
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w12 = 8)",
-                        "exp": {
-                            "left": "w12",
-                            "op": "=",
-                            "right": 8
-                        }
-                    },
-                    "location": "l"
-                },
-                {
                     "action": "snd_ack12",
                     "destinations": [
                         {
                             "assignments": [
                                 {
-                                    "comment": "w12 <- 3",
+                                    "comment": "w12 <- 9",
                                     "ref": "w12",
-                                    "value": 3
-                                },
-                                {
-                                    "comment": "y1 <- 0",
-                                    "ref": "y1",
-                                    "value": 0
-                                },
-                                {
-                                    "comment": "y2 <- 0",
-                                    "ref": "y2",
-                                    "value": 0
+                                    "value": 9
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w12 = 0)",
+                        "comment": "(w12 = 9)",
                         "exp": {
                             "left": "w12",
                             "op": "=",
-                            "right": 0
+                            "right": 9
                         }
                     },
                     "location": "l"
@@ -348,59 +338,6 @@
                             "left": "w12",
                             "op": "=",
                             "right": 1
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "snd_ack12",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w12 <- 3",
-                                    "ref": "w12",
-                                    "value": 3
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w12 = 3)",
-                        "exp": {
-                            "left": "w12",
-                            "op": "=",
-                            "right": 3
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "snd_ack12",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w12 <- 9",
-                                    "ref": "w12",
-                                    "value": 9
-                                },
-                                {
-                                    "comment": "y2 <- 0",
-                                    "ref": "y2",
-                                    "value": 0
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w12 = 5)",
-                        "exp": {
-                            "left": "w12",
-                            "op": "=",
-                            "right": 5
                         }
                     },
                     "location": "l"
@@ -435,20 +372,83 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "w12 <- 9",
+                                    "comment": "w12 <- 3",
                                     "ref": "w12",
-                                    "value": 9
+                                    "value": 3
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w12 = 9)",
+                        "comment": "(w12 = 3)",
                         "exp": {
                             "left": "w12",
                             "op": "=",
-                            "right": 9
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 9",
+                                    "ref": "w12",
+                                    "value": 9
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 5)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 3",
+                                    "ref": "w12",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "y1 <- 0",
+                                    "ref": "y1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 0)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 0
                         }
                     },
                     "location": "l"
@@ -488,25 +488,44 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "w12 <- 8",
+                                    "comment": "w12 <- 4",
                                     "ref": "w12",
-                                    "value": 8
-                                },
-                                {
-                                    "comment": "y2 <- 0",
-                                    "ref": "y2",
-                                    "value": 0
+                                    "value": 4
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w12 = 1)",
+                        "comment": "(w12 = 4)",
                         "exp": {
                             "left": "w12",
                             "op": "=",
-                            "right": 1
+                            "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 5",
+                                    "ref": "w12",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 5)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 5
                         }
                     },
                     "location": "l"
@@ -544,30 +563,6 @@
                                     "comment": "w12 <- 5",
                                     "ref": "w12",
                                     "value": 5
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w12 = 5)",
-                        "exp": {
-                            "left": "w12",
-                            "op": "=",
-                            "right": 5
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "snd_idle12",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w12 <- 5",
-                                    "ref": "w12",
-                                    "value": 5
                                 },
                                 {
                                     "comment": "y1 <- 0",
@@ -599,20 +594,25 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "w12 <- 4",
+                                    "comment": "w12 <- 8",
                                     "ref": "w12",
-                                    "value": 4
+                                    "value": 8
+                                },
+                                {
+                                    "comment": "y2 <- 0",
+                                    "ref": "y2",
+                                    "value": 0
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w12 = 4)",
+                        "comment": "(w12 = 1)",
                         "exp": {
                             "left": "w12",
                             "op": "=",
-                            "right": 4
+                            "right": 1
                         }
                     },
                     "location": "l"
@@ -647,6 +647,30 @@
                             "left": "w12",
                             "op": "=",
                             "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w12 <- 1",
+                                    "ref": "w12",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w12 = 1)",
+                        "exp": {
+                            "left": "w12",
+                            "op": "=",
+                            "right": 1
                         }
                     },
                     "location": "l"
@@ -753,30 +777,6 @@
                             "left": "w12",
                             "op": "=",
                             "right": 7
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "snd_req12",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w12 <- 1",
-                                    "ref": "w12",
-                                    "value": 1
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w12 = 1)",
-                        "exp": {
-                            "left": "w12",
-                            "op": "=",
-                            "right": 1
                         }
                     },
                     "location": "l"
@@ -997,7 +997,18 @@
                 }
             ],
             "name": "wire12",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0.0,
+                    "name": "y1",
+                    "type": "clock"
+                },
+                {
+                    "initial-value": 0.0,
+                    "name": "y2",
+                    "type": "clock"
+                }
+            ]
         },
         {
             "edges": [
@@ -1070,30 +1081,6 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "s1 <- 5",
-                                    "ref": "s1",
-                                    "value": 5
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(s1 = 3)",
-                        "exp": {
-                            "left": "s1",
-                            "op": "=",
-                            "right": 3
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "rec_idle21",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
                                     "comment": "s1 <- 1",
                                     "ref": "s1",
                                     "value": 1
@@ -1145,25 +1132,25 @@
                     "location": "l"
                 },
                 {
-                    "action": "rec_req21",
+                    "action": "rec_idle21",
                     "destinations": [
                         {
                             "assignments": [
                                 {
-                                    "comment": "s1 <- 3",
+                                    "comment": "s1 <- 5",
                                     "ref": "s1",
-                                    "value": 3
+                                    "value": 5
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(s1 = 5)",
+                        "comment": "(s1 = 3)",
                         "exp": {
                             "left": "s1",
                             "op": "=",
-                            "right": 5
+                            "right": 3
                         }
                     },
                     "location": "l"
@@ -1220,6 +1207,30 @@
                             "left": "s1",
                             "op": "=",
                             "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s1 <- 3",
+                                    "ref": "s1",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s1 = 5)",
+                        "exp": {
+                            "left": "s1",
+                            "op": "=",
+                            "right": 5
                         }
                     },
                     "location": "l"
@@ -1607,7 +1618,13 @@
                 }
             ],
             "name": "node1",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0.0,
+                    "name": "x1",
+                    "type": "clock"
+                }
+            ]
         },
         {
             "edges": [
@@ -1699,6 +1716,30 @@
                         {
                             "assignments": [
                                 {
+                                    "comment": "w21 <- 3",
+                                    "ref": "w21",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 9)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 9
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
                                     "comment": "w21 <- 1",
                                     "ref": "w21",
                                     "value": 1
@@ -1752,25 +1793,25 @@
                     "location": "l"
                 },
                 {
-                    "action": "rec_idle21",
+                    "action": "rec_req21",
                     "destinations": [
                         {
                             "assignments": [
                                 {
-                                    "comment": "w21 <- 3",
+                                    "comment": "w21 <- 5",
                                     "ref": "w21",
-                                    "value": 3
+                                    "value": 5
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w21 = 9)",
+                        "comment": "(w21 = 8)",
                         "exp": {
                             "left": "w21",
                             "op": "=",
-                            "right": 9
+                            "right": 8
                         }
                     },
                     "location": "l"
@@ -1834,59 +1875,25 @@
                     "location": "l"
                 },
                 {
-                    "action": "rec_req21",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w21 <- 5",
-                                    "ref": "w21",
-                                    "value": 5
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w21 = 8)",
-                        "exp": {
-                            "left": "w21",
-                            "op": "=",
-                            "right": 8
-                        }
-                    },
-                    "location": "l"
-                },
-                {
                     "action": "snd_ack21",
                     "destinations": [
                         {
                             "assignments": [
                                 {
-                                    "comment": "w21 <- 3",
+                                    "comment": "w21 <- 9",
                                     "ref": "w21",
-                                    "value": 3
-                                },
-                                {
-                                    "comment": "z1 <- 0",
-                                    "ref": "z1",
-                                    "value": 0
-                                },
-                                {
-                                    "comment": "z2 <- 0",
-                                    "ref": "z2",
-                                    "value": 0
+                                    "value": 9
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w21 = 0)",
+                        "comment": "(w21 = 9)",
                         "exp": {
                             "left": "w21",
                             "op": "=",
-                            "right": 0
+                            "right": 9
                         }
                     },
                     "location": "l"
@@ -1916,59 +1923,6 @@
                             "left": "w21",
                             "op": "=",
                             "right": 1
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "snd_ack21",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w21 <- 3",
-                                    "ref": "w21",
-                                    "value": 3
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w21 = 3)",
-                        "exp": {
-                            "left": "w21",
-                            "op": "=",
-                            "right": 3
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "snd_ack21",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w21 <- 9",
-                                    "ref": "w21",
-                                    "value": 9
-                                },
-                                {
-                                    "comment": "z2 <- 0",
-                                    "ref": "z2",
-                                    "value": 0
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w21 = 5)",
-                        "exp": {
-                            "left": "w21",
-                            "op": "=",
-                            "right": 5
                         }
                     },
                     "location": "l"
@@ -2003,20 +1957,83 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "w21 <- 9",
+                                    "comment": "w21 <- 3",
                                     "ref": "w21",
-                                    "value": 9
+                                    "value": 3
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w21 = 9)",
+                        "comment": "(w21 = 3)",
                         "exp": {
                             "left": "w21",
                             "op": "=",
-                            "right": 9
+                            "right": 3
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 9",
+                                    "ref": "w21",
+                                    "value": 9
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 5)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 5
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_ack21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 3",
+                                    "ref": "w21",
+                                    "value": 3
+                                },
+                                {
+                                    "comment": "z1 <- 0",
+                                    "ref": "z1",
+                                    "value": 0
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 0)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 0
                         }
                     },
                     "location": "l"
@@ -2056,25 +2073,44 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "w21 <- 8",
+                                    "comment": "w21 <- 4",
                                     "ref": "w21",
-                                    "value": 8
-                                },
-                                {
-                                    "comment": "z2 <- 0",
-                                    "ref": "z2",
-                                    "value": 0
+                                    "value": 4
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w21 = 1)",
+                        "comment": "(w21 = 4)",
                         "exp": {
                             "left": "w21",
                             "op": "=",
-                            "right": 1
+                            "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_idle21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 5",
+                                    "ref": "w21",
+                                    "value": 5
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 5)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 5
                         }
                     },
                     "location": "l"
@@ -2112,30 +2148,6 @@
                                     "comment": "w21 <- 5",
                                     "ref": "w21",
                                     "value": 5
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w21 = 5)",
-                        "exp": {
-                            "left": "w21",
-                            "op": "=",
-                            "right": 5
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "snd_idle21",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w21 <- 5",
-                                    "ref": "w21",
-                                    "value": 5
                                 },
                                 {
                                     "comment": "z1 <- 0",
@@ -2167,20 +2179,25 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "w21 <- 4",
+                                    "comment": "w21 <- 8",
                                     "ref": "w21",
-                                    "value": 4
+                                    "value": 8
+                                },
+                                {
+                                    "comment": "z2 <- 0",
+                                    "ref": "z2",
+                                    "value": 0
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(w21 = 4)",
+                        "comment": "(w21 = 1)",
                         "exp": {
                             "left": "w21",
                             "op": "=",
-                            "right": 4
+                            "right": 1
                         }
                     },
                     "location": "l"
@@ -2215,6 +2232,30 @@
                             "left": "w21",
                             "op": "=",
                             "right": 0
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "snd_req21",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "w21 <- 1",
+                                    "ref": "w21",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(w21 = 1)",
+                        "exp": {
+                            "left": "w21",
+                            "op": "=",
+                            "right": 1
                         }
                     },
                     "location": "l"
@@ -2321,30 +2362,6 @@
                             "left": "w21",
                             "op": "=",
                             "right": 7
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "snd_req21",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "w21 <- 1",
-                                    "ref": "w21",
-                                    "value": 1
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(w21 = 1)",
-                        "exp": {
-                            "left": "w21",
-                            "op": "=",
-                            "right": 1
                         }
                     },
                     "location": "l"
@@ -2503,7 +2520,18 @@
                 }
             ],
             "name": "wire21",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0.0,
+                    "name": "z1",
+                    "type": "clock"
+                },
+                {
+                    "initial-value": 0.0,
+                    "name": "z2",
+                    "type": "clock"
+                }
+            ]
         },
         {
             "edges": [
@@ -2576,30 +2604,6 @@
                         {
                             "assignments": [
                                 {
-                                    "comment": "s2 <- 5",
-                                    "ref": "s2",
-                                    "value": 5
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "(s2 = 3)",
-                        "exp": {
-                            "left": "s2",
-                            "op": "=",
-                            "right": 3
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "rec_idle12",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
                                     "comment": "s2 <- 1",
                                     "ref": "s2",
                                     "value": 1
@@ -2651,25 +2655,25 @@
                     "location": "l"
                 },
                 {
-                    "action": "rec_req12",
+                    "action": "rec_idle12",
                     "destinations": [
                         {
                             "assignments": [
                                 {
-                                    "comment": "s2 <- 3",
+                                    "comment": "s2 <- 5",
                                     "ref": "s2",
-                                    "value": 3
+                                    "value": 5
                                 }
                             ],
                             "location": "l"
                         }
                     ],
                     "guard": {
-                        "comment": "(s2 = 5)",
+                        "comment": "(s2 = 3)",
                         "exp": {
                             "left": "s2",
                             "op": "=",
-                            "right": 5
+                            "right": 3
                         }
                     },
                     "location": "l"
@@ -2726,6 +2730,30 @@
                             "left": "s2",
                             "op": "=",
                             "right": 4
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "rec_req12",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "s2 <- 3",
+                                    "ref": "s2",
+                                    "value": 3
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "(s2 = 5)",
+                        "exp": {
+                            "left": "s2",
+                            "op": "=",
+                            "right": 5
                         }
                     },
                     "location": "l"
@@ -3113,7 +3141,13 @@
                 }
             ],
             "name": "node2",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0.0,
+                    "name": "x2",
+                    "type": "clock"
+                }
+            ]
         }
     ],
     "constants": [
@@ -3157,7 +3191,8 @@
         }
     ],
     "features": [
-        "derived-operators"
+        "derived-operators",
+        "multi-objective-properties"
     ],
     "jani-version": 1,
     "name": "firewire-pta",
@@ -3201,6 +3236,48 @@
                 }
             },
             "name": "eventually"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": "done",
+                                    "time-bounds": {
+                                        "upper": "T",
+                                        "upper-exclusive": false
+                                    }
+                                },
+                                "op": "Pmin"
+                            },
+                            "opt": "min"
+                        },
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": "done"
+                                },
+                                "op": "Pmin"
+                            },
+                            "opt": "min"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi"
         }
     ],
     "restrict-initial": {
@@ -3372,16 +3449,6 @@
             }
         },
         {
-            "initial-value": 0.0,
-            "name": "y1",
-            "type": "clock"
-        },
-        {
-            "initial-value": 0.0,
-            "name": "y2",
-            "type": "clock"
-        },
-        {
             "initial-value": 0,
             "name": "s1",
             "type": {
@@ -3390,11 +3457,6 @@
                 "lower-bound": 0,
                 "upper-bound": 8
             }
-        },
-        {
-            "initial-value": 0.0,
-            "name": "x1",
-            "type": "clock"
         },
         {
             "initial-value": 0,
@@ -3407,16 +3469,6 @@
             }
         },
         {
-            "initial-value": 0.0,
-            "name": "z1",
-            "type": "clock"
-        },
-        {
-            "initial-value": 0.0,
-            "name": "z2",
-            "type": "clock"
-        },
-        {
             "initial-value": 0,
             "name": "s2",
             "type": {
@@ -3425,11 +3477,6 @@
                 "lower-bound": 0,
                 "upper-bound": 8
             }
-        },
-        {
-            "initial-value": 0.0,
-            "name": "x2",
-            "type": "clock"
         }
     ]
 }

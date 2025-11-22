@@ -11,11 +11,11 @@
 			"notes": "Initial version.",
 			"version": 1
 		},
-        {
+		{
 			"version": 2,
 			"date": "2025-11-12",
 			"notes": "Added property `multi´."
-        }
+		}
 	],
 	"author": [
 		"Olivier Markowitch <omarkow@ulb.ac.be>",
@@ -51,11 +51,11 @@
 			"description": "The minimum probability that the protocol eventually terminates successfully.",
 			"type": "prob-reach"
 		},
-        {
-            "name": "multi",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between `deadline´ and `eventually´."
-        }
+		{
+			"name": "multi",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between `deadline´ and `eventually´."
+		}
 	],
 	"files": [
 		{
@@ -66,9 +66,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism repudiation_honest.prism --tojani repudiation_honest.jani --prop repudiation_honest.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism repudiation_honest.prism --prop repudiation_honest.props --tojani repudiation_honest.jani"
 			},
 			"file-parameter-values": [],
 			"open-parameter-values": [

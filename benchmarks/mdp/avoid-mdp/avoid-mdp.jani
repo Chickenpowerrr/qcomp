@@ -1238,7 +1238,8 @@
     ],
     "features": [
         "derived-operators",
-        "functions"
+        "functions",
+        "multi-objective-properties"
     ],
     "functions": [
         {
@@ -1741,6 +1742,44 @@
                 }
             },
             "name": "time_min"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": "notbad",
+                                    "op": "U",
+                                    "right": "goal"
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": 1,
+                                "op": "Emin",
+                                "reach": "goal"
+                            },
+                            "opt": "min"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi"
         }
     ],
     "restrict-initial": {

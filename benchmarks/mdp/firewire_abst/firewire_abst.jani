@@ -601,282 +601,12 @@
                         }
                     ],
                     "guard": {
-                        "comment": "((s = 3) & (x < delay))",
-                        "exp": {
-                            "left": {
-                                "left": "s",
-                                "op": "=",
-                                "right": 3
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x",
-                                "op": "<",
-                                "right": "delay"
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x <- (min((x + 1), 168))",
-                                    "ref": "x",
-                                    "value": {
-                                        "left": {
-                                            "left": "x",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 168
-                                    }
-                                },
-                                {
-                                    "comment": "time <- 1",
-                                    "ref": "time",
-                                    "value": 1
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s = 6) & (x < 167))",
-                        "exp": {
-                            "left": {
-                                "left": "s",
-                                "op": "=",
-                                "right": 6
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x",
-                                "op": "<",
-                                "right": 167
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x <- (min((x + 1), 168))",
-                                    "ref": "x",
-                                    "value": {
-                                        "left": {
-                                            "left": "x",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 168
-                                    }
-                                },
-                                {
-                                    "comment": "time <- 1",
-                                    "ref": "time",
-                                    "value": 1
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s = 5) & (x < 85))",
-                        "exp": {
-                            "left": {
-                                "left": "s",
-                                "op": "=",
-                                "right": 5
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x",
-                                "op": "<",
-                                "right": 85
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x <- (min((x + 1), 168))",
-                                    "ref": "x",
-                                    "value": {
-                                        "left": {
-                                            "left": "x",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 168
-                                    }
-                                },
-                                {
-                                    "comment": "time <- 1",
-                                    "ref": "time",
-                                    "value": 1
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
                         "comment": "((s = 0) & (x < delay))",
                         "exp": {
                             "left": {
                                 "left": "s",
                                 "op": "=",
                                 "right": 0
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x",
-                                "op": "<",
-                                "right": "delay"
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x <- (min((x + 1), 168))",
-                                    "ref": "x",
-                                    "value": {
-                                        "left": {
-                                            "left": "x",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 168
-                                    }
-                                },
-                                {
-                                    "comment": "time <- 1",
-                                    "ref": "time",
-                                    "value": 1
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s = 4) & (x < delay))",
-                        "exp": {
-                            "left": {
-                                "left": "s",
-                                "op": "=",
-                                "right": 4
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x",
-                                "op": "<",
-                                "right": "delay"
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x <- (min((x + 1), 168))",
-                                    "ref": "x",
-                                    "value": {
-                                        "left": {
-                                            "left": "x",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 168
-                                    }
-                                },
-                                {
-                                    "comment": "time <- 1",
-                                    "ref": "time",
-                                    "value": 1
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s = 8) & (x < 167))",
-                        "exp": {
-                            "left": {
-                                "left": "s",
-                                "op": "=",
-                                "right": 8
-                            },
-                            "op": "∧",
-                            "right": {
-                                "left": "x",
-                                "op": "<",
-                                "right": 167
-                            }
-                        }
-                    },
-                    "location": "l"
-                },
-                {
-                    "action": "time",
-                    "destinations": [
-                        {
-                            "assignments": [
-                                {
-                                    "comment": "x <- (min((x + 1), 168))",
-                                    "ref": "x",
-                                    "value": {
-                                        "left": {
-                                            "left": "x",
-                                            "op": "+",
-                                            "right": 1
-                                        },
-                                        "op": "min",
-                                        "right": 168
-                                    }
-                                },
-                                {
-                                    "comment": "time <- 1",
-                                    "ref": "time",
-                                    "value": 1
-                                }
-                            ],
-                            "location": "l"
-                        }
-                    ],
-                    "guard": {
-                        "comment": "((s = 2) & (x < delay))",
-                        "exp": {
-                            "left": {
-                                "left": "s",
-                                "op": "=",
-                                "right": 2
                             },
                             "op": "∧",
                             "right": {
@@ -961,12 +691,282 @@
                         }
                     ],
                     "guard": {
+                        "comment": "((s = 2) & (x < delay))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 2
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x",
+                                "op": "<",
+                                "right": "delay"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- (min((x + 1), 168))",
+                                    "ref": "x",
+                                    "value": {
+                                        "left": {
+                                            "left": "x",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 3) & (x < delay))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 3
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x",
+                                "op": "<",
+                                "right": "delay"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- (min((x + 1), 168))",
+                                    "ref": "x",
+                                    "value": {
+                                        "left": {
+                                            "left": "x",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 4) & (x < delay))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 4
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x",
+                                "op": "<",
+                                "right": "delay"
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- (min((x + 1), 168))",
+                                    "ref": "x",
+                                    "value": {
+                                        "left": {
+                                            "left": "x",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 5) & (x < 85))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 5
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x",
+                                "op": "<",
+                                "right": 85
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- (min((x + 1), 168))",
+                                    "ref": "x",
+                                    "value": {
+                                        "left": {
+                                            "left": "x",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 6) & (x < 167))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 6
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x",
+                                "op": "<",
+                                "right": 167
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- (min((x + 1), 168))",
+                                    "ref": "x",
+                                    "value": {
+                                        "left": {
+                                            "left": "x",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
                         "comment": "((s = 7) & (x < 167))",
                         "exp": {
                             "left": {
                                 "left": "s",
                                 "op": "=",
                                 "right": 7
+                            },
+                            "op": "∧",
+                            "right": {
+                                "left": "x",
+                                "op": "<",
+                                "right": 167
+                            }
+                        }
+                    },
+                    "location": "l"
+                },
+                {
+                    "action": "time",
+                    "destinations": [
+                        {
+                            "assignments": [
+                                {
+                                    "comment": "x <- (min((x + 1), 168))",
+                                    "ref": "x",
+                                    "value": {
+                                        "left": {
+                                            "left": "x",
+                                            "op": "+",
+                                            "right": 1
+                                        },
+                                        "op": "min",
+                                        "right": 168
+                                    }
+                                },
+                                {
+                                    "comment": "time <- 1",
+                                    "ref": "time",
+                                    "value": 1
+                                }
+                            ],
+                            "location": "l"
+                        }
+                    ],
+                    "guard": {
+                        "comment": "((s = 8) & (x < 167))",
+                        "exp": {
+                            "left": {
+                                "left": "s",
+                                "op": "=",
+                                "right": 8
                             },
                             "op": "∧",
                             "right": {
@@ -999,7 +999,18 @@
                 }
             ],
             "name": "abstract_firewire",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "x",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 168
+                    }
+                }
+            ]
         }
     ],
     "constants": [
@@ -1024,7 +1035,8 @@
         }
     ],
     "features": [
-        "derived-operators"
+        "derived-operators",
+        "multi-objective-properties"
     ],
     "jani-version": 1,
     "name": "firewire_abst",
@@ -1104,6 +1116,58 @@
                 }
             },
             "name": "time_min"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "left": {
+                                    "exp": {
+                                        "left": true,
+                                        "op": "U",
+                                        "right": "done"
+                                    },
+                                    "op": "Pmin"
+                                },
+                                "op": "≥",
+                                "right": 1
+                            }
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "rounds",
+                                "op": "Emin",
+                                "reach": "done"
+                            },
+                            "opt": "min"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "time",
+                                "op": "Emin",
+                                "reach": "done"
+                            },
+                            "opt": "min"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi"
         }
     ],
     "restrict-initial": {
@@ -1149,16 +1213,6 @@
             "name": "rounds",
             "transient": true,
             "type": "real"
-        },
-        {
-            "initial-value": 0,
-            "name": "x",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 168
-            }
         },
         {
             "initial-value": 0,

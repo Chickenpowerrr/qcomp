@@ -11,11 +11,11 @@
 			"notes": "Initial version.",
 			"version": 1
 		}
-    ],
+	],
 	"author": [
 		"Bruno Lacerda",
-        "David Parker",
-        "Nick Hawes"
+		"David Parker",
+		"Nick Hawes"
 	],
 	"submitter": "Mark van Wijk <mark.vanwijk@utwente.nl>",
 	"source": "https://github.com/tquatmann/qcomp23-multi/tree/main/models/srv",
@@ -24,7 +24,9 @@
 		"url": "https://github.com/tquatmann/qcomp23-multi"
 	},
 	"description": "This model was part of the multi-objective benchmarking suite for QComp 2023 [0]. We consider a robot in a care home which has to make deliveries and entertain patients. See [1] for more details",
-	"references": ["https://doi.org/10.1609/icaps.v27i1.13865"],
+	"references": [
+		"https://doi.org/10.1609/icaps.v27i1.13865"
+	],
 	"notes": "QComp 2023 multi-objective benchmark",
 	"parameters": [
 		{
@@ -33,19 +35,19 @@
 			"description": "0: Don't unfold any rewards, 1: Unfold the value rewards, 2: Unfold all rewards",
 			"type": "positive integer"
 		},
-        {
-            "name": "B",
-            "kind": "open",
-            "description": "Magnitude of reward bounds",
-            "type": "positive integer"
-        }
+		{
+			"name": "B",
+			"kind": "open",
+			"description": "Magnitude of reward bounds",
+			"type": "positive integer"
+		}
 	],
 	"properties": [
 		{
 			"name": "social",
 			"description": "The tradeoff between the minimising time spent, while maximising interaction.",
 			"type": "multi-tradeoff"
-		},	
+		},
 		{
 			"name": "performant",
 			"description": "The maximum probability of finishing the task, while staying in time bounds.",
@@ -66,7 +68,7 @@
 			"description": "The tradeoff between maximising the probability of finishing the task and maximising interaction, before the time is exceeded.",
 			"type": "multi-tradeoff"
 		}
-    ],
+	],
 	"files": [
 		{
 			"file": "care-home.jani",
@@ -76,13 +78,13 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.8.2 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism care-home.prism --prop care-home.props --tojani care-home.jani"
 			},
-            "file-parameter-values": [],
+			"file-parameter-values": [],
 			"open-parameter-values": [
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -94,7 +96,7 @@
 						}
 					]
 				},
-                {
+				{
 					"values": [
 						{
 							"name": "Unf",
@@ -106,8 +108,8 @@
 						}
 					]
 				}
-            ]
+			]
 		}
-    ],
+	],
 	"results": []
 }
