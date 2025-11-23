@@ -14415,6 +14415,9 @@
                         },
                         {
                             "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
                                 "exp": "w_1_total",
                                 "op": "Emax"
                             },
@@ -14501,6 +14504,9 @@
                         },
                         {
                             "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
                                 "exp": "w_1_total",
                                 "op": "Emax"
                             },

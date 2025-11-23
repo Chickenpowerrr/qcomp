@@ -1721,6 +1721,9 @@
                     "properties": [
                         {
                             "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
                                 "exp": "time",
                                 "op": "Emin"
                             },
@@ -1728,6 +1731,9 @@
                         },
                         {
                             "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
                                 "exp": "energy",
                                 "op": "Emin"
                             },

@@ -10073,7 +10073,15 @@
                                 ],
                                 "exp": "ROZ",
                                 "op": "Emin",
-                                "step-instant": "B"
+                                "reward-instants": [
+                                    {
+                                        "accumulate": [
+                                            "steps"
+                                        ],
+                                        "exp": "time",
+                                        "instant": "B"
+                                    }
+                                ]
                             },
                             "opt": "min"
                         }
@@ -10113,6 +10121,9 @@
                         },
                         {
                             "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
                                 "exp": "ROZ",
                                 "op": "Emin"
                             },

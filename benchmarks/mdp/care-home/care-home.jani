@@ -2858,6 +2858,9 @@
                     "properties": [
                         {
                             "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
                                 "exp": "time",
                                 "op": "Emin"
                             },
@@ -2865,6 +2868,9 @@
                         },
                         {
                             "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
                                 "exp": "interaction",
                                 "op": "Emax"
                             },
@@ -3130,7 +3136,15 @@
                                 ],
                                 "exp": "interaction",
                                 "op": "Emax",
-                                "step-instant": "B"
+                                "reward-instants": [
+                                    {
+                                        "accumulate": [
+                                            "steps"
+                                        ],
+                                        "exp": "time",
+                                        "instant": "B"
+                                    }
+                                ]
                             },
                             "opt": "max"
                         }
