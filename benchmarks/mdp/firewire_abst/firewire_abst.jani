@@ -1129,20 +1129,6 @@
                     "properties": [
                         {
                             "exp": {
-                                "left": {
-                                    "exp": {
-                                        "left": true,
-                                        "op": "U",
-                                        "right": "done"
-                                    },
-                                    "op": "Pmin"
-                                },
-                                "op": "≥",
-                                "right": 1
-                            }
-                        },
-                        {
-                            "exp": {
                                 "accumulate": [
                                     "steps"
                                 ],

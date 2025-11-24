@@ -40,6 +40,12 @@
 			"kind": "open",
 			"description": "Magnitude of reward bounds",
 			"type": "positive integer"
+		},
+		{
+			"name": "COUNTER",
+			"kind": "open",
+			"description": "Fatigue threshold",
+			"type": "positive integer"
 		}
 	],
 	"properties": [
@@ -88,6 +94,10 @@
 						{
 							"name": "B",
 							"value": 500
+						},
+						{
+							"name": "COUNTER",
+							"value": 0
 						}
 					]
 				},
@@ -100,6 +110,10 @@
 						{
 							"name": "B",
 							"value": 750
+						},
+						{
+							"name": "COUNTER",
+							"value": 0
 						}
 					]
 				},
@@ -112,6 +126,10 @@
 						{
 							"name": "B",
 							"value": 1000
+						},
+						{
+							"name": "COUNTER",
+							"value": 0
 						}
 					]
 				},
@@ -124,6 +142,10 @@
 						{
 							"name": "B",
 							"value": 1500
+						},
+						{
+							"name": "COUNTER",
+							"value": 0
 						}
 					]
 				}

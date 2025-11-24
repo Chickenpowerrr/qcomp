@@ -8597,21 +8597,6 @@
                     "properties": [
                         {
                             "exp": {
-                                "exp": {
-                                    "left": true,
-                                    "op": "U",
-                                    "right": {
-                                        "left": "col",
-                                        "op": "=",
-                                        "right": "COL"
-                                    }
-                                },
-                                "op": "Pmax"
-                            },
-                            "opt": "max"
-                        },
-                        {
-                            "exp": {
                                 "accumulate": [
                                     "steps"
                                 ],

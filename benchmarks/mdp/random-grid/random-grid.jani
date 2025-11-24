@@ -485,7 +485,8 @@
         }
     ],
     "features": [
-        "derived-operators"
+        "derived-operators",
+        "multi-objective-properties"
     ],
     "jani-version": 1,
     "name": "random-grid",
@@ -585,6 +586,104 @@
                 }
             },
             "name": "time_min"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": {
+                                        "left": {
+                                            "left": "x",
+                                            "op": "≠",
+                                            "right": {
+                                                "left": "N",
+                                                "op": "-",
+                                                "right": 1
+                                            }
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": "y",
+                                            "op": "≠",
+                                            "right": {
+                                                "left": "N",
+                                                "op": "-",
+                                                "right": 2
+                                            }
+                                        }
+                                    },
+                                    "op": "U",
+                                    "right": {
+                                        "left": {
+                                            "left": {
+                                                "left": "x",
+                                                "op": "=",
+                                                "right": "N"
+                                            },
+                                            "op": "∧",
+                                            "right": {
+                                                "left": "y",
+                                                "op": "=",
+                                                "right": "N"
+                                            }
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": "z",
+                                            "op": "=",
+                                            "right": "N"
+                                        }
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": 1,
+                                "op": "Emin",
+                                "reach": {
+                                    "left": {
+                                        "left": {
+                                            "left": "x",
+                                            "op": "=",
+                                            "right": "N"
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": "y",
+                                            "op": "=",
+                                            "right": "N"
+                                        }
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "z",
+                                        "op": "=",
+                                        "right": "N"
+                                    }
+                                }
+                            },
+                            "opt": "min"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi"
         }
     ],
     "restrict-initial": {
