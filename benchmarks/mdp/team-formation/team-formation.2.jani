@@ -8379,12 +8379,182 @@
         },
         {
             "body": {
+                "left": {
+                    "left": "can_join_t1__param__e12",
+                    "op": "*",
+                    "right": "can_join_t1__param__m2_t1"
+                },
+                "op": ">",
+                "right": 0
+            },
+            "name": "can_join_t1",
+            "parameters": [
+                {
+                    "name": "can_join_t1__param__m2_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "can_join_t1__param__e12",
+                    "type": "int"
+                }
+            ],
+            "type": "bool"
+        },
+        {
+            "body": {
                 "left": "status",
                 "op": "=",
                 "right": 4
             },
             "name": "finished",
             "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "left": "t1_r3",
+                            "op": "=",
+                            "right": 1
+                        },
+                        "op": "⇒",
+                        "right": {
+                            "left": {
+                                "left": {
+                                    "left": "task1_completed__param__m1_t1",
+                                    "op": "=",
+                                    "right": 1
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "task1_completed__param__resource1",
+                                    "op": "=",
+                                    "right": 3
+                                }
+                            },
+                            "op": "∨",
+                            "right": {
+                                "left": {
+                                    "left": "task1_completed__param__m2_t1",
+                                    "op": "=",
+                                    "right": 1
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "task1_completed__param__resource2",
+                                    "op": "=",
+                                    "right": 3
+                                }
+                            }
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": {
+                            "left": "t1_r1",
+                            "op": "=",
+                            "right": 1
+                        },
+                        "op": "⇒",
+                        "right": {
+                            "left": {
+                                "left": {
+                                    "left": "task1_completed__param__m1_t1",
+                                    "op": "=",
+                                    "right": 1
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "task1_completed__param__resource1",
+                                    "op": "=",
+                                    "right": 1
+                                }
+                            },
+                            "op": "∨",
+                            "right": {
+                                "left": {
+                                    "left": "task1_completed__param__m2_t1",
+                                    "op": "=",
+                                    "right": 1
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "task1_completed__param__resource2",
+                                    "op": "=",
+                                    "right": 1
+                                }
+                            }
+                        }
+                    }
+                },
+                "op": "∧",
+                "right": {
+                    "left": {
+                        "left": {
+                            "left": "t1_r2",
+                            "op": "=",
+                            "right": 1
+                        },
+                        "op": "⇒",
+                        "right": {
+                            "left": {
+                                "left": {
+                                    "left": "task1_completed__param__m1_t1",
+                                    "op": "=",
+                                    "right": 1
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "task1_completed__param__resource1",
+                                    "op": "=",
+                                    "right": 2
+                                }
+                            },
+                            "op": "∨",
+                            "right": {
+                                "left": {
+                                    "left": "task1_completed__param__m2_t1",
+                                    "op": "=",
+                                    "right": 1
+                                },
+                                "op": "∧",
+                                "right": {
+                                    "left": "task1_completed__param__resource2",
+                                    "op": "=",
+                                    "right": 2
+                                }
+                            }
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "args": [],
+                        "function": "finished",
+                        "op": "call"
+                    }
+                }
+            },
+            "name": "task1_completed",
+            "parameters": [
+                {
+                    "name": "task1_completed__param__m1_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "task1_completed__param__m2_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "task1_completed__param__resource1",
+                    "type": "int"
+                },
+                {
+                    "name": "task1_completed__param__resource2",
+                    "type": "int"
+                }
+            ],
             "type": "bool"
         },
         {
@@ -8600,104 +8770,6 @@
                 }
             ],
             "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": "resource_filled_t2__param__m2_t2",
-                    "op": "=",
-                    "right": 1
-                },
-                "op": "∧",
-                "right": {
-                    "left": "resource_filled_t2__param__resource1",
-                    "op": "=",
-                    "right": "resource_filled_t2__param__resource2"
-                }
-            },
-            "name": "resource_filled_t2",
-            "parameters": [
-                {
-                    "name": "resource_filled_t2__param__m2_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "resource_filled_t2__param__resource1",
-                    "type": "int"
-                },
-                {
-                    "name": "resource_filled_t2__param__resource2",
-                    "type": "int"
-                }
-            ],
-            "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": "can_join_t1__param__e12",
-                    "op": "*",
-                    "right": "can_join_t1__param__m2_t1"
-                },
-                "op": ">",
-                "right": 0
-            },
-            "name": "can_join_t1",
-            "parameters": [
-                {
-                    "name": "can_join_t1__param__m2_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "can_join_t1__param__e12",
-                    "type": "int"
-                }
-            ],
-            "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": "IP__param__e12",
-                    "op": "*",
-                    "right": {
-                        "left": 1,
-                        "op": "-",
-                        "right": {
-                            "else": 1,
-                            "if": {
-                                "left": {
-                                    "left": "IP__param__m2_t1",
-                                    "op": "+",
-                                    "right": "IP__param__m2_t2"
-                                },
-                                "op": "=",
-                                "right": 0
-                            },
-                            "op": "ite",
-                            "then": 0
-                        }
-                    }
-                },
-                "op": "/",
-                "right": "IP__param__e12"
-            },
-            "name": "IP",
-            "parameters": [
-                {
-                    "name": "IP__param__m2_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__m2_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__e12",
-                    "type": "int"
-                }
-            ],
-            "type": "int"
         },
         {
             "body": {
@@ -9061,153 +9133,6 @@
                 "left": {
                     "left": {
                         "left": {
-                            "left": "t1_r3",
-                            "op": "=",
-                            "right": 1
-                        },
-                        "op": "⇒",
-                        "right": {
-                            "left": {
-                                "left": {
-                                    "left": "task1_completed__param__m1_t1",
-                                    "op": "=",
-                                    "right": 1
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "task1_completed__param__resource1",
-                                    "op": "=",
-                                    "right": 3
-                                }
-                            },
-                            "op": "∨",
-                            "right": {
-                                "left": {
-                                    "left": "task1_completed__param__m2_t1",
-                                    "op": "=",
-                                    "right": 1
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "task1_completed__param__resource2",
-                                    "op": "=",
-                                    "right": 3
-                                }
-                            }
-                        }
-                    },
-                    "op": "∧",
-                    "right": {
-                        "left": {
-                            "left": "t1_r1",
-                            "op": "=",
-                            "right": 1
-                        },
-                        "op": "⇒",
-                        "right": {
-                            "left": {
-                                "left": {
-                                    "left": "task1_completed__param__m1_t1",
-                                    "op": "=",
-                                    "right": 1
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "task1_completed__param__resource1",
-                                    "op": "=",
-                                    "right": 1
-                                }
-                            },
-                            "op": "∨",
-                            "right": {
-                                "left": {
-                                    "left": "task1_completed__param__m2_t1",
-                                    "op": "=",
-                                    "right": 1
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "task1_completed__param__resource2",
-                                    "op": "=",
-                                    "right": 1
-                                }
-                            }
-                        }
-                    }
-                },
-                "op": "∧",
-                "right": {
-                    "left": {
-                        "left": {
-                            "left": "t1_r2",
-                            "op": "=",
-                            "right": 1
-                        },
-                        "op": "⇒",
-                        "right": {
-                            "left": {
-                                "left": {
-                                    "left": "task1_completed__param__m1_t1",
-                                    "op": "=",
-                                    "right": 1
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "task1_completed__param__resource1",
-                                    "op": "=",
-                                    "right": 2
-                                }
-                            },
-                            "op": "∨",
-                            "right": {
-                                "left": {
-                                    "left": "task1_completed__param__m2_t1",
-                                    "op": "=",
-                                    "right": 1
-                                },
-                                "op": "∧",
-                                "right": {
-                                    "left": "task1_completed__param__resource2",
-                                    "op": "=",
-                                    "right": 2
-                                }
-                            }
-                        }
-                    },
-                    "op": "∧",
-                    "right": {
-                        "args": [],
-                        "function": "finished",
-                        "op": "call"
-                    }
-                }
-            },
-            "name": "task1_completed",
-            "parameters": [
-                {
-                    "name": "task1_completed__param__m1_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "task1_completed__param__m2_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "task1_completed__param__resource1",
-                    "type": "int"
-                },
-                {
-                    "name": "task1_completed__param__resource2",
-                    "type": "int"
-                }
-            ],
-            "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": {
-                        "left": {
                             "args": [
                                 "agent1_joins_successful_team_of_1__param__m1_t1",
                                 "agent1_joins_successful_team_of_1__param__m2_t1",
@@ -9297,6 +9222,37 @@
                 },
                 {
                     "name": "agent1_joins_successful_team_of_1__param__resource2",
+                    "type": "int"
+                }
+            ],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": "resource_filled_t2__param__m2_t2",
+                    "op": "=",
+                    "right": 1
+                },
+                "op": "∧",
+                "right": {
+                    "left": "resource_filled_t2__param__resource1",
+                    "op": "=",
+                    "right": "resource_filled_t2__param__resource2"
+                }
+            },
+            "name": "resource_filled_t2",
+            "parameters": [
+                {
+                    "name": "resource_filled_t2__param__m2_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "resource_filled_t2__param__resource1",
+                    "type": "int"
+                },
+                {
+                    "name": "resource_filled_t2__param__resource2",
                     "type": "int"
                 }
             ],

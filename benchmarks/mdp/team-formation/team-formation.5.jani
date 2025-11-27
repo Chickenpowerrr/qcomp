@@ -48853,368 +48853,6 @@
             "body": {
                 "left": {
                     "left": {
-                        "left": {
-                            "left": "IP__param__e15",
-                            "op": "*",
-                            "right": {
-                                "left": 1,
-                                "op": "-",
-                                "right": {
-                                    "else": 1,
-                                    "if": {
-                                        "left": {
-                                            "left": "IP__param__m5_t1",
-                                            "op": "+",
-                                            "right": "IP__param__m5_t2"
-                                        },
-                                        "op": "=",
-                                        "right": 0
-                                    },
-                                    "op": "ite",
-                                    "then": 0
-                                }
-                            }
-                        },
-                        "op": "+",
-                        "right": {
-                            "left": "IP__param__e13",
-                            "op": "*",
-                            "right": {
-                                "left": 1,
-                                "op": "-",
-                                "right": {
-                                    "else": 1,
-                                    "if": {
-                                        "left": {
-                                            "left": "IP__param__m3_t1",
-                                            "op": "+",
-                                            "right": "IP__param__m3_t2"
-                                        },
-                                        "op": "=",
-                                        "right": 0
-                                    },
-                                    "op": "ite",
-                                    "then": 0
-                                }
-                            }
-                        }
-                    },
-                    "op": "+",
-                    "right": {
-                        "left": {
-                            "left": "IP__param__e14",
-                            "op": "*",
-                            "right": {
-                                "left": 1,
-                                "op": "-",
-                                "right": {
-                                    "else": 1,
-                                    "if": {
-                                        "left": {
-                                            "left": "IP__param__m4_t1",
-                                            "op": "+",
-                                            "right": "IP__param__m4_t2"
-                                        },
-                                        "op": "=",
-                                        "right": 0
-                                    },
-                                    "op": "ite",
-                                    "then": 0
-                                }
-                            }
-                        },
-                        "op": "+",
-                        "right": {
-                            "left": "IP__param__e12",
-                            "op": "*",
-                            "right": {
-                                "left": 1,
-                                "op": "-",
-                                "right": {
-                                    "else": 1,
-                                    "if": {
-                                        "left": {
-                                            "left": "IP__param__m2_t1",
-                                            "op": "+",
-                                            "right": "IP__param__m2_t2"
-                                        },
-                                        "op": "=",
-                                        "right": 0
-                                    },
-                                    "op": "ite",
-                                    "then": 0
-                                }
-                            }
-                        }
-                    }
-                },
-                "op": "/",
-                "right": {
-                    "left": {
-                        "left": "IP__param__e15",
-                        "op": "+",
-                        "right": "IP__param__e13"
-                    },
-                    "op": "+",
-                    "right": {
-                        "left": "IP__param__e14",
-                        "op": "+",
-                        "right": "IP__param__e12"
-                    }
-                }
-            },
-            "name": "IP",
-            "parameters": [
-                {
-                    "name": "IP__param__m2_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__m2_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__m3_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__m3_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__m4_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__m4_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__m5_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__m5_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__e12",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__e13",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__e14",
-                    "type": "int"
-                },
-                {
-                    "name": "IP__param__e15",
-                    "type": "int"
-                }
-            ],
-            "type": "int"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": {
-                        "left": {
-                            "args": [
-                                "agent1_joins_successful_team_of_3__param__m1_t1",
-                                "agent1_joins_successful_team_of_3__param__m2_t1",
-                                "agent1_joins_successful_team_of_3__param__m3_t1",
-                                "agent1_joins_successful_team_of_3__param__m4_t1",
-                                "agent1_joins_successful_team_of_3__param__m5_t1",
-                                "agent1_joins_successful_team_of_3__param__resource1",
-                                "agent1_joins_successful_team_of_3__param__resource2",
-                                "agent1_joins_successful_team_of_3__param__resource3",
-                                "agent1_joins_successful_team_of_3__param__resource4",
-                                "agent1_joins_successful_team_of_3__param__resource5"
-                            ],
-                            "function": "task1_completed",
-                            "op": "call"
-                        },
-                        "op": "∧",
-                        "right": {
-                            "left": "agent1_joins_successful_team_of_3__param__m1_t1",
-                            "op": "=",
-                            "right": 1
-                        }
-                    },
-                    "op": "∧",
-                    "right": {
-                        "left": {
-                            "args": [
-                                "agent1_joins_successful_team_of_3__param__m1_t1",
-                                "agent1_joins_successful_team_of_3__param__m2_t1",
-                                "agent1_joins_successful_team_of_3__param__m3_t1",
-                                "agent1_joins_successful_team_of_3__param__m4_t1",
-                                "agent1_joins_successful_team_of_3__param__m5_t1"
-                            ],
-                            "function": "team_size_t1",
-                            "op": "call"
-                        },
-                        "op": "=",
-                        "right": 3
-                    }
-                },
-                "op": "∨",
-                "right": {
-                    "left": {
-                        "left": {
-                            "args": [
-                                "agent1_joins_successful_team_of_3__param__m1_t2",
-                                "agent1_joins_successful_team_of_3__param__m2_t2",
-                                "agent1_joins_successful_team_of_3__param__m3_t2",
-                                "agent1_joins_successful_team_of_3__param__m4_t2",
-                                "agent1_joins_successful_team_of_3__param__m5_t2",
-                                "agent1_joins_successful_team_of_3__param__resource1",
-                                "agent1_joins_successful_team_of_3__param__resource2",
-                                "agent1_joins_successful_team_of_3__param__resource3",
-                                "agent1_joins_successful_team_of_3__param__resource4",
-                                "agent1_joins_successful_team_of_3__param__resource5"
-                            ],
-                            "function": "task2_completed",
-                            "op": "call"
-                        },
-                        "op": "∧",
-                        "right": {
-                            "left": "agent1_joins_successful_team_of_3__param__m1_t2",
-                            "op": "=",
-                            "right": 1
-                        }
-                    },
-                    "op": "∧",
-                    "right": {
-                        "left": {
-                            "args": [
-                                "agent1_joins_successful_team_of_3__param__m1_t2",
-                                "agent1_joins_successful_team_of_3__param__m2_t2",
-                                "agent1_joins_successful_team_of_3__param__m3_t2",
-                                "agent1_joins_successful_team_of_3__param__m4_t2",
-                                "agent1_joins_successful_team_of_3__param__m5_t2"
-                            ],
-                            "function": "team_size_t2",
-                            "op": "call"
-                        },
-                        "op": "=",
-                        "right": 3
-                    }
-                }
-            },
-            "name": "agent1_joins_successful_team_of_3",
-            "parameters": [
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m1_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m1_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m2_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m2_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m3_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m3_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m4_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m4_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m5_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__m5_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__resource1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__resource2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__resource3",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__resource4",
-                    "type": "int"
-                },
-                {
-                    "name": "agent1_joins_successful_team_of_3__param__resource5",
-                    "type": "int"
-                }
-            ],
-            "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": {
-                        "left": {
-                            "left": "turn5",
-                            "op": "=",
-                            "right": 2
-                        },
-                        "op": "∨",
-                        "right": {
-                            "left": "turn2",
-                            "op": "=",
-                            "right": 2
-                        }
-                    },
-                    "op": "∨",
-                    "right": {
-                        "left": "turn3",
-                        "op": "=",
-                        "right": 2
-                    }
-                },
-                "op": "∨",
-                "right": {
-                    "left": {
-                        "left": "turn4",
-                        "op": "=",
-                        "right": 2
-                    },
-                    "op": "∨",
-                    "right": {
-                        "left": "turn1",
-                        "op": "=",
-                        "right": 2
-                    }
-                }
-            },
-            "name": "s2_sched",
-            "parameters": [],
-            "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": {
                         "args": [
                             "agent3_joins_successful_team__param__m1_t1",
                             "agent3_joins_successful_team__param__m2_t1",
@@ -50133,6 +49771,49 @@
             "body": {
                 "left": {
                     "left": {
+                        "left": "team_size_t2__param__m5_t2",
+                        "op": "+",
+                        "right": "team_size_t2__param__m2_t2"
+                    },
+                    "op": "+",
+                    "right": "team_size_t2__param__m3_t2"
+                },
+                "op": "+",
+                "right": {
+                    "left": "team_size_t2__param__m4_t2",
+                    "op": "+",
+                    "right": "team_size_t2__param__m1_t2"
+                }
+            },
+            "name": "team_size_t2",
+            "parameters": [
+                {
+                    "name": "team_size_t2__param__m1_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "team_size_t2__param__m2_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "team_size_t2__param__m3_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "team_size_t2__param__m4_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "team_size_t2__param__m5_t2",
+                    "type": "int"
+                }
+            ],
+            "type": "int"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
                         "left": {
                             "args": [
                                 "agent3_joins_successful_team_of_1__param__m1_t1",
@@ -50846,49 +50527,6 @@
             "name": "s3_sched",
             "parameters": [],
             "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": {
-                        "left": "team_size_t2__param__m5_t2",
-                        "op": "+",
-                        "right": "team_size_t2__param__m2_t2"
-                    },
-                    "op": "+",
-                    "right": "team_size_t2__param__m3_t2"
-                },
-                "op": "+",
-                "right": {
-                    "left": "team_size_t2__param__m4_t2",
-                    "op": "+",
-                    "right": "team_size_t2__param__m1_t2"
-                }
-            },
-            "name": "team_size_t2",
-            "parameters": [
-                {
-                    "name": "team_size_t2__param__m1_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "team_size_t2__param__m2_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "team_size_t2__param__m3_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "team_size_t2__param__m4_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "team_size_t2__param__m5_t2",
-                    "type": "int"
-                }
-            ],
-            "type": "int"
         },
         {
             "body": {
@@ -51782,6 +51420,354 @@
                 },
                 {
                     "name": "task1_completed__param__resource5",
+                    "type": "int"
+                }
+            ],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "args": [
+                                "agent3_joins_successful_team_of_3__param__m1_t1",
+                                "agent3_joins_successful_team_of_3__param__m2_t1",
+                                "agent3_joins_successful_team_of_3__param__m3_t1",
+                                "agent3_joins_successful_team_of_3__param__m4_t1",
+                                "agent3_joins_successful_team_of_3__param__m5_t1",
+                                "agent3_joins_successful_team_of_3__param__resource1",
+                                "agent3_joins_successful_team_of_3__param__resource2",
+                                "agent3_joins_successful_team_of_3__param__resource3",
+                                "agent3_joins_successful_team_of_3__param__resource4",
+                                "agent3_joins_successful_team_of_3__param__resource5"
+                            ],
+                            "function": "task1_completed",
+                            "op": "call"
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": "agent3_joins_successful_team_of_3__param__m3_t1",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": {
+                            "args": [
+                                "agent3_joins_successful_team_of_3__param__m1_t1",
+                                "agent3_joins_successful_team_of_3__param__m2_t1",
+                                "agent3_joins_successful_team_of_3__param__m3_t1",
+                                "agent3_joins_successful_team_of_3__param__m4_t1",
+                                "agent3_joins_successful_team_of_3__param__m5_t1"
+                            ],
+                            "function": "team_size_t1",
+                            "op": "call"
+                        },
+                        "op": "=",
+                        "right": 3
+                    }
+                },
+                "op": "∨",
+                "right": {
+                    "left": {
+                        "left": {
+                            "args": [
+                                "agent3_joins_successful_team_of_3__param__m1_t2",
+                                "agent3_joins_successful_team_of_3__param__m2_t2",
+                                "agent3_joins_successful_team_of_3__param__m3_t2",
+                                "agent3_joins_successful_team_of_3__param__m4_t2",
+                                "agent3_joins_successful_team_of_3__param__m5_t2",
+                                "agent3_joins_successful_team_of_3__param__resource1",
+                                "agent3_joins_successful_team_of_3__param__resource2",
+                                "agent3_joins_successful_team_of_3__param__resource3",
+                                "agent3_joins_successful_team_of_3__param__resource4",
+                                "agent3_joins_successful_team_of_3__param__resource5"
+                            ],
+                            "function": "task2_completed",
+                            "op": "call"
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": "agent3_joins_successful_team_of_3__param__m3_t2",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": {
+                            "args": [
+                                "agent3_joins_successful_team_of_3__param__m1_t2",
+                                "agent3_joins_successful_team_of_3__param__m2_t2",
+                                "agent3_joins_successful_team_of_3__param__m3_t2",
+                                "agent3_joins_successful_team_of_3__param__m4_t2",
+                                "agent3_joins_successful_team_of_3__param__m5_t2"
+                            ],
+                            "function": "team_size_t2",
+                            "op": "call"
+                        },
+                        "op": "=",
+                        "right": 3
+                    }
+                }
+            },
+            "name": "agent3_joins_successful_team_of_3",
+            "parameters": [
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m1_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m1_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m2_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m2_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m3_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m3_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m4_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m4_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m5_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__m5_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__resource1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__resource2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__resource3",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__resource4",
+                    "type": "int"
+                },
+                {
+                    "name": "agent3_joins_successful_team_of_3__param__resource5",
+                    "type": "int"
+                }
+            ],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "left": "turn5",
+                            "op": "=",
+                            "right": 2
+                        },
+                        "op": "∨",
+                        "right": {
+                            "left": "turn2",
+                            "op": "=",
+                            "right": 2
+                        }
+                    },
+                    "op": "∨",
+                    "right": {
+                        "left": "turn3",
+                        "op": "=",
+                        "right": 2
+                    }
+                },
+                "op": "∨",
+                "right": {
+                    "left": {
+                        "left": "turn4",
+                        "op": "=",
+                        "right": 2
+                    },
+                    "op": "∨",
+                    "right": {
+                        "left": "turn1",
+                        "op": "=",
+                        "right": 2
+                    }
+                }
+            },
+            "name": "s2_sched",
+            "parameters": [],
+            "type": "bool"
+        },
+        {
+            "body": {
+                "left": {
+                    "left": {
+                        "left": {
+                            "args": [
+                                "agent1_joins_successful_team_of_3__param__m1_t1",
+                                "agent1_joins_successful_team_of_3__param__m2_t1",
+                                "agent1_joins_successful_team_of_3__param__m3_t1",
+                                "agent1_joins_successful_team_of_3__param__m4_t1",
+                                "agent1_joins_successful_team_of_3__param__m5_t1",
+                                "agent1_joins_successful_team_of_3__param__resource1",
+                                "agent1_joins_successful_team_of_3__param__resource2",
+                                "agent1_joins_successful_team_of_3__param__resource3",
+                                "agent1_joins_successful_team_of_3__param__resource4",
+                                "agent1_joins_successful_team_of_3__param__resource5"
+                            ],
+                            "function": "task1_completed",
+                            "op": "call"
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": "agent1_joins_successful_team_of_3__param__m1_t1",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": {
+                            "args": [
+                                "agent1_joins_successful_team_of_3__param__m1_t1",
+                                "agent1_joins_successful_team_of_3__param__m2_t1",
+                                "agent1_joins_successful_team_of_3__param__m3_t1",
+                                "agent1_joins_successful_team_of_3__param__m4_t1",
+                                "agent1_joins_successful_team_of_3__param__m5_t1"
+                            ],
+                            "function": "team_size_t1",
+                            "op": "call"
+                        },
+                        "op": "=",
+                        "right": 3
+                    }
+                },
+                "op": "∨",
+                "right": {
+                    "left": {
+                        "left": {
+                            "args": [
+                                "agent1_joins_successful_team_of_3__param__m1_t2",
+                                "agent1_joins_successful_team_of_3__param__m2_t2",
+                                "agent1_joins_successful_team_of_3__param__m3_t2",
+                                "agent1_joins_successful_team_of_3__param__m4_t2",
+                                "agent1_joins_successful_team_of_3__param__m5_t2",
+                                "agent1_joins_successful_team_of_3__param__resource1",
+                                "agent1_joins_successful_team_of_3__param__resource2",
+                                "agent1_joins_successful_team_of_3__param__resource3",
+                                "agent1_joins_successful_team_of_3__param__resource4",
+                                "agent1_joins_successful_team_of_3__param__resource5"
+                            ],
+                            "function": "task2_completed",
+                            "op": "call"
+                        },
+                        "op": "∧",
+                        "right": {
+                            "left": "agent1_joins_successful_team_of_3__param__m1_t2",
+                            "op": "=",
+                            "right": 1
+                        }
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": {
+                            "args": [
+                                "agent1_joins_successful_team_of_3__param__m1_t2",
+                                "agent1_joins_successful_team_of_3__param__m2_t2",
+                                "agent1_joins_successful_team_of_3__param__m3_t2",
+                                "agent1_joins_successful_team_of_3__param__m4_t2",
+                                "agent1_joins_successful_team_of_3__param__m5_t2"
+                            ],
+                            "function": "team_size_t2",
+                            "op": "call"
+                        },
+                        "op": "=",
+                        "right": 3
+                    }
+                }
+            },
+            "name": "agent1_joins_successful_team_of_3",
+            "parameters": [
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m1_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m1_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m2_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m2_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m3_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m3_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m4_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m4_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m5_t1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__m5_t2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__resource1",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__resource2",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__resource3",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__resource4",
+                    "type": "int"
+                },
+                {
+                    "name": "agent1_joins_successful_team_of_3__param__resource5",
                     "type": "int"
                 }
             ],
@@ -53073,159 +53059,6 @@
                 },
                 {
                     "name": "resource_filled_t2__param__resource5",
-                    "type": "int"
-                }
-            ],
-            "type": "bool"
-        },
-        {
-            "body": {
-                "left": {
-                    "left": {
-                        "left": {
-                            "args": [
-                                "agent3_joins_successful_team_of_3__param__m1_t1",
-                                "agent3_joins_successful_team_of_3__param__m2_t1",
-                                "agent3_joins_successful_team_of_3__param__m3_t1",
-                                "agent3_joins_successful_team_of_3__param__m4_t1",
-                                "agent3_joins_successful_team_of_3__param__m5_t1",
-                                "agent3_joins_successful_team_of_3__param__resource1",
-                                "agent3_joins_successful_team_of_3__param__resource2",
-                                "agent3_joins_successful_team_of_3__param__resource3",
-                                "agent3_joins_successful_team_of_3__param__resource4",
-                                "agent3_joins_successful_team_of_3__param__resource5"
-                            ],
-                            "function": "task1_completed",
-                            "op": "call"
-                        },
-                        "op": "∧",
-                        "right": {
-                            "left": "agent3_joins_successful_team_of_3__param__m3_t1",
-                            "op": "=",
-                            "right": 1
-                        }
-                    },
-                    "op": "∧",
-                    "right": {
-                        "left": {
-                            "args": [
-                                "agent3_joins_successful_team_of_3__param__m1_t1",
-                                "agent3_joins_successful_team_of_3__param__m2_t1",
-                                "agent3_joins_successful_team_of_3__param__m3_t1",
-                                "agent3_joins_successful_team_of_3__param__m4_t1",
-                                "agent3_joins_successful_team_of_3__param__m5_t1"
-                            ],
-                            "function": "team_size_t1",
-                            "op": "call"
-                        },
-                        "op": "=",
-                        "right": 3
-                    }
-                },
-                "op": "∨",
-                "right": {
-                    "left": {
-                        "left": {
-                            "args": [
-                                "agent3_joins_successful_team_of_3__param__m1_t2",
-                                "agent3_joins_successful_team_of_3__param__m2_t2",
-                                "agent3_joins_successful_team_of_3__param__m3_t2",
-                                "agent3_joins_successful_team_of_3__param__m4_t2",
-                                "agent3_joins_successful_team_of_3__param__m5_t2",
-                                "agent3_joins_successful_team_of_3__param__resource1",
-                                "agent3_joins_successful_team_of_3__param__resource2",
-                                "agent3_joins_successful_team_of_3__param__resource3",
-                                "agent3_joins_successful_team_of_3__param__resource4",
-                                "agent3_joins_successful_team_of_3__param__resource5"
-                            ],
-                            "function": "task2_completed",
-                            "op": "call"
-                        },
-                        "op": "∧",
-                        "right": {
-                            "left": "agent3_joins_successful_team_of_3__param__m3_t2",
-                            "op": "=",
-                            "right": 1
-                        }
-                    },
-                    "op": "∧",
-                    "right": {
-                        "left": {
-                            "args": [
-                                "agent3_joins_successful_team_of_3__param__m1_t2",
-                                "agent3_joins_successful_team_of_3__param__m2_t2",
-                                "agent3_joins_successful_team_of_3__param__m3_t2",
-                                "agent3_joins_successful_team_of_3__param__m4_t2",
-                                "agent3_joins_successful_team_of_3__param__m5_t2"
-                            ],
-                            "function": "team_size_t2",
-                            "op": "call"
-                        },
-                        "op": "=",
-                        "right": 3
-                    }
-                }
-            },
-            "name": "agent3_joins_successful_team_of_3",
-            "parameters": [
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m1_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m1_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m2_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m2_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m3_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m3_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m4_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m4_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m5_t1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__m5_t2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__resource1",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__resource2",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__resource3",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__resource4",
-                    "type": "int"
-                },
-                {
-                    "name": "agent3_joins_successful_team_of_3__param__resource5",
                     "type": "int"
                 }
             ],
