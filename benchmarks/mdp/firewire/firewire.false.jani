@@ -4780,7 +4780,7 @@
                                         "op": "U",
                                         "right": "done"
                                     },
-                                    "op": "Pmin"
+                                    "op": "Pmax"
                                 },
                                 "op": "≥",
                                 "right": 1

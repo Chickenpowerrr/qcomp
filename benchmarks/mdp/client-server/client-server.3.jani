@@ -1432,7 +1432,7 @@
                                         "steps"
                                     ],
                                     "exp": "grants1",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": {
@@ -1449,7 +1449,7 @@
                                         "steps"
                                     ],
                                     "exp": "grants2",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": {
@@ -1466,7 +1466,7 @@
                                         "steps"
                                     ],
                                     "exp": "grants3",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": {
@@ -1499,7 +1499,7 @@
                                         "steps"
                                     ],
                                     "exp": "grants1",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": 0.03
@@ -1512,7 +1512,7 @@
                                         "steps"
                                     ],
                                     "exp": "grants2",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": {
@@ -1529,7 +1529,7 @@
                                         "steps"
                                     ],
                                     "exp": "grants3",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": {
@@ -1572,7 +1572,7 @@
                                         "steps"
                                     ],
                                     "exp": "grants2",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": {
@@ -1589,7 +1589,7 @@
                                         "steps"
                                     ],
                                     "exp": "grants3",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": {

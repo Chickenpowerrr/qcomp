@@ -1076,7 +1076,7 @@
                                         "exit"
                                     ],
                                     "exp": "withvirus",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": {
@@ -1093,7 +1093,7 @@
                                         "steps"
                                     ],
                                     "exp": "clean",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": 0.15
@@ -1122,7 +1122,7 @@
                                         "exit"
                                     ],
                                     "exp": "withvirus",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": 3.3
@@ -1135,7 +1135,7 @@
                                         "steps"
                                     ],
                                     "exp": "clean",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": 0.15
@@ -1174,7 +1174,7 @@
                                         "steps"
                                     ],
                                     "exp": "clean",
-                                    "op": "Smin"
+                                    "op": "Smax"
                                 },
                                 "op": "≥",
                                 "right": 0.15
