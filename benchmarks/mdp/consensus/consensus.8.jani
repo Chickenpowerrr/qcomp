@@ -3134,7 +3134,8 @@
     ],
     "features": [
         "derived-operators",
-        "state-exit-rewards"
+        "state-exit-rewards",
+        "multi-objective-properties"
     ],
     "jani-version": 1,
     "name": "consensus.8",
@@ -3243,6 +3244,89 @@
                 }
             },
             "name": "steps_min"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": "finished"
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "exit"
+                                ],
+                                "exp": "steps",
+                                "op": "Emin",
+                                "reach": "finished"
+                            },
+                            "opt": "min"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi_pos"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": {
+                                        "left": "finished",
+                                        "op": "∧",
+                                        "right": {
+                                            "exp": "agree",
+                                            "op": "¬"
+                                        }
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "exit"
+                                ],
+                                "exp": "steps",
+                                "op": "Emax",
+                                "reach": "finished"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi_neg"
         }
     ],
     "restrict-initial": {

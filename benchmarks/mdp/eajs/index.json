@@ -16,7 +16,7 @@
 			"notes": "Added property `Multi´.",
 			"version": 2
 		}
-    ],
+	],
 	"author": [
 		"Marcus Daum"
 	],
@@ -58,11 +58,11 @@
 			"description": "The maximal probability that a utility value of at least `B´ is achieved until the battery becomes empty.",
 			"type": "prob-reach-reward-bounded"
 		},
-        {
-            "name": "Multi",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between `ExpUtil´ and `ProbUtil´."
-        }
+		{
+			"name": "Multi",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between `ExpUtil´ and `ProbUtil´."
+		}
 	],
 	"files": [
 		{
@@ -73,9 +73,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism eajs.2.prism --tojani eajs.2.jani --prop eajs.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism eajs.2.prism --prop eajs.props --tojani eajs.2.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -132,9 +132,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism eajs.3.prism --tojani eajs.3.jani --prop eajs.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism eajs.3.prism --prop eajs.props --tojani eajs.3.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -191,9 +191,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism eajs.4.prism --tojani eajs.4.jani --prop eajs.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism eajs.4.prism --prop eajs.props --tojani eajs.4.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -250,9 +250,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism eajs.5.prism --tojani eajs.5.jani --prop eajs.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism eajs.5.prism --prop eajs.props --tojani eajs.5.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -309,9 +309,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism eajs.6.prism --tojani eajs.6.jani --prop eajs.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism eajs.6.prism --prop eajs.props --tojani eajs.6.jani"
 			},
 			"file-parameter-values": [
 				{

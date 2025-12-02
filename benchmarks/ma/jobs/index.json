@@ -11,11 +11,11 @@
 			"date": "2018-08-13",
 			"notes": "Initial version."
 		},
-        {
+		{
 			"version": 2,
 			"date": "2025-11-12",
 			"notes": "Added property `multi´."
-        }
+		}
 	],
 	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
@@ -55,11 +55,11 @@
 			"description": "The maximal probability that half of the jobs are finished within `N´/(4`K´) time units.",
 			"type": "prob-reach-time-bounded"
 		},
-        {
-            "name": "multi",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between `completiontime´, `avgtime´, and `prhalfdone´."
-        }
+		{
+			"name": "multi",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between `completiontime´, `avgtime´, and `prhalfdone´."
+		}
 	],
 	"files": [
 		{
@@ -70,9 +70,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism jobs.5-2.ma --tojani jobs.5-2.jani --prop jobs.csl --globalvars --standard-compliant"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism jobs.5-2.ma --prop jobs.csl --tojani jobs.5-2.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -124,9 +124,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism jobs.10-3.ma --tojani jobs.10-3.jani --prop jobs.csl --globalvars --standard-compliant"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism jobs.10-3.ma --prop jobs.csl --tojani jobs.10-3.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -178,9 +178,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism jobs.15-3.ma --tojani jobs.15-3.jani --prop jobs.csl --globalvars --standard-compliant"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism jobs.15-3.ma --prop jobs.csl --tojani jobs.15-3.jani"
 			},
 			"file-parameter-values": [
 				{

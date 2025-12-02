@@ -13582,7 +13582,8 @@
     ],
     "features": [
         "derived-operators",
-        "functions"
+        "functions",
+        "multi-objective-properties"
     ],
     "functions": [
         {
@@ -13702,6 +13703,68 @@
                 }
             },
             "name": "time_min"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "cost",
+                                "op": "Emin",
+                                "reach": {
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 12
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 12
+                                    }
+                                }
+                            },
+                            "opt": "min"
+                        },
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "time",
+                                "op": "Emin",
+                                "reach": {
+                                    "left": {
+                                        "left": "s1",
+                                        "op": "=",
+                                        "right": 12
+                                    },
+                                    "op": "∧",
+                                    "right": {
+                                        "left": "s2",
+                                        "op": "=",
+                                        "right": 12
+                                    }
+                                }
+                            },
+                            "opt": "min"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi_pos"
         }
     ],
     "restrict-initial": {

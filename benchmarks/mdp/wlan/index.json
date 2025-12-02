@@ -11,11 +11,11 @@
 			"notes": "Initial version.",
 			"version": 1
 		},
-        {
+		{
 			"version": 2,
 			"date": "2025-11-12",
 			"notes": "Added properties `multi_pos´ and `multi_neg´."
-        }
+		}
 	],
 	"author": [
 		"Marta Kwiatkowska <Marta.Kwiatkowska@cs.ox.ac.uk>",
@@ -84,16 +84,16 @@
 			"description": "Minimum expected time for both stations to send correctly.",
 			"type": "exp-reward"
 		},
-        {
-            "name": "multi_pos",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between desired properties `cost_min´ and `time_min´."
-        },
-        {
-            "name": "multi_neg",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between undesired properties `collisions´, `cost_max´, `num_collisions´, and `time_max´."
-        }
+		{
+			"name": "multi_pos",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between desired properties `cost_min´ and `time_min´."
+		},
+		{
+			"name": "multi_neg",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between undesired properties `collisions´, `cost_max´, `num_collisions´, and `time_max´."
+		}
 	],
 	"files": [
 		{
@@ -104,9 +104,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan.0.prism --tojani wlan.0.jani --prop wlan.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.0.prism --prop wlan.props --tojani wlan.0.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -188,9 +188,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan.1.prism --tojani wlan.1.jani --prop wlan.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.1.prism --prop wlan.props --tojani wlan.1.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -272,9 +272,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan.2.prism --tojani wlan.2.jani --prop wlan.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.2.prism --prop wlan.props --tojani wlan.2.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -356,9 +356,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan.3.prism --tojani wlan.3.jani --prop wlan.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.3.prism --prop wlan.props --tojani wlan.3.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -440,9 +440,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan.4.prism --tojani wlan.4.jani --prop wlan.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.4.prism --prop wlan.props --tojani wlan.4.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -524,9 +524,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan.5.prism --tojani wlan.5.jani --prop wlan.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.5.prism --prop wlan.props --tojani wlan.5.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -608,9 +608,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism wlan.6.prism --tojani wlan.6.jani --prop wlan.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism wlan.6.prism --prop wlan.props --tojani wlan.6.jani"
 			},
 			"file-parameter-values": [
 				{

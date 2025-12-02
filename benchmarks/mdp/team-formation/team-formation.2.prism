@@ -35,7 +35,7 @@ formula resource_filled_t1 = (m2_t1=1 & resource1=resource2);
 formula resource_filled_t2 = (m2_t2=1 & resource1=resource2);
 
 // formula to compute team initiation probability (assuming each agent has at least one connection)
-formula IP = (e12*(1-((m2_t1+m2_t2)=0?0:1))) / (e12);
+// formula IP = (e12*(1-((m2_t1+m2_t2)=0?0:1))) / (e12);
 
 
 

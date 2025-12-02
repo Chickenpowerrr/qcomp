@@ -335,7 +335,23 @@
                 }
             ],
             "name": "sender",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "probes",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 4
+                    }
+                },
+                {
+                    "initial-value": 0.0,
+                    "name": "x",
+                    "type": "clock"
+                }
+            ]
         },
         {
             "edges": [
@@ -357,7 +373,11 @@
                             "location": "l",
                             "probability": {
                                 "comment": "1/10",
-                                "exp": 0.1
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
                             }
                         },
                         {
@@ -376,7 +396,11 @@
                             "location": "l",
                             "probability": {
                                 "comment": "9/10",
-                                "exp": 0.9
+                                "exp": {
+                                    "left": 9.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
                             }
                         }
                     ],
@@ -471,7 +495,11 @@
                             "location": "l",
                             "probability": {
                                 "comment": "1/10",
-                                "exp": 0.1
+                                "exp": {
+                                    "left": 1.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
                             }
                         },
                         {
@@ -490,7 +518,11 @@
                             "location": "l",
                             "probability": {
                                 "comment": "9/10",
-                                "exp": 0.9
+                                "exp": {
+                                    "left": 9.0,
+                                    "op": "/",
+                                    "right": 10.0
+                                }
                             }
                         }
                     ],
@@ -530,7 +562,23 @@
                 }
             ],
             "name": "environment",
-            "variables": []
+            "variables": [
+                {
+                    "initial-value": 0,
+                    "name": "e",
+                    "type": {
+                        "base": "int",
+                        "kind": "bounded",
+                        "lower-bound": 0,
+                        "upper-bound": 2
+                    }
+                },
+                {
+                    "initial-value": 0.0,
+                    "name": "y",
+                    "type": "clock"
+                }
+            ]
         }
     ],
     "constants": [
@@ -545,7 +593,8 @@
         }
     ],
     "features": [
-        "derived-operators"
+        "derived-operators",
+        "multi-objective-properties"
     ],
     "jani-version": 1,
     "name": "zeroconf-pta",
@@ -613,6 +662,72 @@
                 }
             },
             "name": "incorrect"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": {
+                                        "left": {
+                                            "left": "s",
+                                            "op": "=",
+                                            "right": 2
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": "ip",
+                                            "op": "=",
+                                            "right": 2
+                                        }
+                                    },
+                                    "time-bounds": {
+                                        "upper": "T",
+                                        "upper-exclusive": false
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "right": {
+                                        "left": {
+                                            "left": "s",
+                                            "op": "=",
+                                            "right": 2
+                                        },
+                                        "op": "∧",
+                                        "right": {
+                                            "left": "ip",
+                                            "op": "=",
+                                            "right": 2
+                                        }
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "multi"
         }
     ],
     "restrict-initial": {
@@ -677,16 +792,6 @@
         },
         {
             "initial-value": 0,
-            "name": "probes",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 4
-            }
-        },
-        {
-            "initial-value": 0,
             "name": "ip",
             "type": {
                 "base": "int",
@@ -694,26 +799,6 @@
                 "lower-bound": 0,
                 "upper-bound": 2
             }
-        },
-        {
-            "initial-value": 0.0,
-            "name": "x",
-            "type": "clock"
-        },
-        {
-            "initial-value": 0,
-            "name": "e",
-            "type": {
-                "base": "int",
-                "kind": "bounded",
-                "lower-bound": 0,
-                "upper-bound": 2
-            }
-        },
-        {
-            "initial-value": 0.0,
-            "name": "y",
-            "type": "clock"
         }
     ]
 }

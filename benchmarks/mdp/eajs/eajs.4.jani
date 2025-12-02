@@ -4252,52 +4252,65 @@
     ],
     "features": [
         "derived-operators",
-        "functions"
+        "functions",
+        "multi-objective-properties"
     ],
     "functions": [
         {
             "body": {
                 "left": {
-                    "left": "loc_4",
+                    "left": "loc_1",
                     "op": "=",
                     "right": 1
                 },
                 "op": "∧",
                 "right": {
-                    "left": "t_4",
+                    "left": "t_1",
                     "op": "=",
                     "right": 0
                 }
             },
-            "name": "process_4_finishes",
+            "name": "process_1_finishes",
             "parameters": [],
             "type": "bool"
         },
         {
             "body": {
                 "left": {
-                    "left": "loc_3",
-                    "op": "=",
-                    "right": 1
+                    "left": {
+                        "left": "loc_1",
+                        "op": "=",
+                        "right": 1
+                    },
+                    "op": "∧",
+                    "right": {
+                        "left": "t_1",
+                        "op": "=",
+                        "right": 0
+                    }
                 },
                 "op": "∧",
-                "right": {
-                    "left": "t_3",
-                    "op": "=",
-                    "right": 0
-                }
+                "right": "failure_1"
             },
-            "name": "process_3_finishes",
+            "name": "localFailure",
             "parameters": [],
             "type": "bool"
         },
         {
             "body": {
-                "left": "battery_load",
-                "op": "=",
-                "right": 0
+                "left": {
+                    "left": "loc_2",
+                    "op": "=",
+                    "right": 1
+                },
+                "op": "∧",
+                "right": {
+                    "left": "t_2",
+                    "op": "=",
+                    "right": 0
+                }
             },
-            "name": "emptyBattery",
+            "name": "process_2_finishes",
             "parameters": [],
             "type": "bool"
         },
@@ -4328,59 +4341,47 @@
         },
         {
             "body": {
-                "left": {
-                    "left": "loc_2",
-                    "op": "=",
-                    "right": 1
-                },
-                "op": "∧",
-                "right": {
-                    "left": "t_2",
-                    "op": "=",
-                    "right": 0
-                }
+                "left": "battery_load",
+                "op": "=",
+                "right": 0
             },
-            "name": "process_2_finishes",
+            "name": "emptyBattery",
             "parameters": [],
             "type": "bool"
         },
         {
             "body": {
                 "left": {
-                    "left": {
-                        "left": "loc_1",
-                        "op": "=",
-                        "right": 1
-                    },
-                    "op": "∧",
-                    "right": {
-                        "left": "t_1",
-                        "op": "=",
-                        "right": 0
-                    }
+                    "left": "loc_3",
+                    "op": "=",
+                    "right": 1
                 },
                 "op": "∧",
-                "right": "failure_1"
+                "right": {
+                    "left": "t_3",
+                    "op": "=",
+                    "right": 0
+                }
             },
-            "name": "localFailure",
+            "name": "process_3_finishes",
             "parameters": [],
             "type": "bool"
         },
         {
             "body": {
                 "left": {
-                    "left": "loc_1",
+                    "left": "loc_4",
                     "op": "=",
                     "right": 1
                 },
                 "op": "∧",
                 "right": {
-                    "left": "t_1",
+                    "left": "t_4",
                     "op": "=",
                     "right": 0
                 }
             },
-            "name": "process_1_finishes",
+            "name": "process_4_finishes",
             "parameters": [],
             "type": "bool"
         }
@@ -4443,6 +4444,64 @@
                 }
             },
             "name": "ProbUtil"
+        },
+        {
+            "expression": {
+                "fun": "values",
+                "op": "filter",
+                "states": {
+                    "op": "initial"
+                },
+                "values": {
+                    "op": "Multi",
+                    "properties": [
+                        {
+                            "exp": {
+                                "accumulate": [
+                                    "steps"
+                                ],
+                                "exp": "utilityLocal",
+                                "op": "Emax",
+                                "reach": {
+                                    "left": "battery_load",
+                                    "op": "=",
+                                    "right": 0
+                                }
+                            },
+                            "opt": "max"
+                        },
+                        {
+                            "exp": {
+                                "exp": {
+                                    "left": true,
+                                    "op": "U",
+                                    "reward-bounds": [
+                                        {
+                                            "accumulate": [
+                                                "steps"
+                                            ],
+                                            "bounds": {
+                                                "lower": "B",
+                                                "lower-exclusive": false
+                                            },
+                                            "exp": "utilityLocal"
+                                        }
+                                    ],
+                                    "right": {
+                                        "left": "battery_load",
+                                        "op": "=",
+                                        "right": 0
+                                    }
+                                },
+                                "op": "Pmax"
+                            },
+                            "opt": "max"
+                        }
+                    ],
+                    "type": "tradeoff"
+                }
+            },
+            "name": "Multi"
         }
     ],
     "restrict-initial": {

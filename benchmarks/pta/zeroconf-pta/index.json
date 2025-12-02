@@ -11,11 +11,11 @@
 			"notes": "Initial version.",
 			"version": 1
 		},
-        {
+		{
 			"version": 2,
 			"date": "2025-11-12",
 			"notes": "Added property `multi´."
-        }
+		}
 	],
 	"author": [
 		"Stuart Cheshire <>",
@@ -53,11 +53,11 @@
 			"description": "The maximum probability of configuring IP address incorrectly.",
 			"type": "prob-reach"
 		},
-        {
-            "name": "multi",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between `deadline´ and `incorrect´."
-        }
+		{
+			"name": "multi",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between `deadline´ and `incorrect´."
+		}
 	],
 	"files": [
 		{
@@ -68,9 +68,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism zeroconf-pta.prism --tojani zeroconf-pta.jani --prop zeroconf-pta.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism zeroconf-pta.prism --prop zeroconf-pta.props --tojani zeroconf-pta.jani"
 			},
 			"file-parameter-values": [],
 			"open-parameter-values": [

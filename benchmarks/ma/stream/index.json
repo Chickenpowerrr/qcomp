@@ -11,11 +11,11 @@
 			"date": "2018-08-13",
 			"notes": "Initial version."
 		},
-        {
+		{
 			"version": 2,
 			"date": "2025-11-12",
 			"notes": "Added property `multi´."
-        }
+		}
 	],
 	"author": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
 	"submitter": "Tim Quatmann <tim.quatmann@cs.rwth-aachen.de>",
@@ -51,11 +51,11 @@
 			"description": "The maximal probability for a buffer underrun within two time units.",
 			"type": "prob-reach-time-bounded"
 		},
-        {
-            "name": "multi",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between `exp_buffertime´, `pr_underrun´, and `pr_underrun_tb´."
-        }
+		{
+			"name": "multi",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between `exp_buffertime´, `pr_underrun´, and `pr_underrun_tb´."
+		}
 	],
 	"files": [
 		{
@@ -66,10 +66,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism stream.ma --tojani stream.jani --prop stream.csl --globalvars --standard-compliant",
-				"note": "then manually edited to use only \"time\" accumulation for property `exp_buffertime´ and only \"steps\" accumulation for property `exp_restarts´"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism stream.ma --prop stream.csl --tojani stream.jani"
 			},
 			"file-parameter-values": [],
 			"open-parameter-values": [

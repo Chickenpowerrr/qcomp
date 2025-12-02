@@ -11,11 +11,11 @@
 			"notes": "Initial version.",
 			"version": 1
 		},
-        {
+		{
 			"version": 2,
 			"date": "2025-11-12",
 			"notes": "Added property `multi´."
-        }
+		}
 	],
 	"author": [
 		"Olivier Markowitch <omarkow@ulb.ac.be>",
@@ -51,11 +51,11 @@
 			"description": "The maximum probability that the malicious recipient eventually gains information.",
 			"type": "prob-reach"
 		},
-        {
-            "name": "multi",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between `deadline´ and `eventually´."
-        }
+		{
+			"name": "multi",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between `deadline´ and `eventually´."
+		}
 	],
 	"files": [
 		{
@@ -66,9 +66,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism repudiation_malicious.prism --tojani repudiation_malicious.jani --prop repudiation_malicious.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism repudiation_malicious.prism --prop repudiation_malicious.props --tojani repudiation_malicious.jani"
 			},
 			"file-parameter-values": [],
 			"open-parameter-values": [

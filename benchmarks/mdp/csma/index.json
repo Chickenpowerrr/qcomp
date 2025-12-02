@@ -15,7 +15,7 @@
 			"version": 2,
 			"date": "2025-11-12",
 			"notes": "Added properties `multi_pos´ and `multi_neg´."
-        }
+		}
 	],
 	"author": "IEEE",
 	"submitter": "Michaela Klauck <klauck@depend.uni-saarland.de>",
@@ -72,15 +72,15 @@
 			"type": "exp-reward"
 		},
 		{
-            "name": "multi_pos",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between desired properties `all_before_max´ and `time_min´."
-        },
+			"name": "multi_pos",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between desired properties `all_before_max´ and `time_min´."
+		},
 		{
-            "name": "multi_neg",
-            "type": "multi-tradeoff",
-            "description": "The tradeoff between undesired properties `all_before_min´, `some_before´, and `time_max´."
-        }
+			"name": "multi_neg",
+			"type": "multi-tradeoff",
+			"description": "The tradeoff between undesired properties `all_before_min´, `some_before´, and `time_max´."
+		}
 	],
 	"files": [
 		{
@@ -91,9 +91,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma.2-2.prism --tojani csma.2-2.jani --prop csma.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma.2-2.prism --prop csma.props --tojani csma.2-2.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -172,9 +172,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma.2-4.prism --tojani csma.2-4.jani --prop csma.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma.2-4.prism --prop csma.props --tojani csma.2-4.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -253,9 +253,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma.2-6.prism --tojani csma.2-6.jani --prop csma.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma.2-6.prism --prop csma.props --tojani csma.2-6.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -334,9 +334,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma.3-2.prism --tojani csma.3-2.jani --prop csma.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma.3-2.prism --prop csma.props --tojani csma.3-2.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -415,9 +415,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma.3-4.prism --tojani csma.3-4.jani --prop csma.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma.3-4.prism --prop csma.props --tojani csma.3-4.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -496,9 +496,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma.3-6.prism --tojani csma.3-6.jani --prop csma.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma.3-6.prism --prop csma.props --tojani csma.3-6.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -559,9 +559,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma.4-2.prism --tojani csma.4-2.jani --prop csma.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma.4-2.prism --prop csma.props --tojani csma.4-2.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -640,9 +640,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma.4-4.prism --tojani csma.4-4.jani --prop csma.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma.4-4.prism --prop csma.props --tojani csma.4-4.jani"
 			},
 			"file-parameter-values": [
 				{
@@ -685,9 +685,9 @@
 			],
 			"conversion": {
 				"tool": "Storm-conv",
-				"version": "1.2.4 (dev)",
-				"url": "http://www.stormchecker.org",
-				"command": "storm-conv --prism csma.4-6.prism --tojani csma.4-6.jani --prop csma.props --globalvars"
+				"version": "1.11.1 (dev)",
+				"url": "https://www.stormchecker.org",
+				"command": "storm-conv --prism csma.4-6.prism --prop csma.props --tojani csma.4-6.jani"
 			},
 			"file-parameter-values": [
 				{
